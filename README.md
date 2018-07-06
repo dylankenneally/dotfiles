@@ -100,6 +100,14 @@ echo "source /opt/rh/devtoolset-4/enable" > ~/.bashrc
 ### IDE setup we want on the system
 _todo:_
 
+### bash
+_todo:_ colours scheme notes...
+https://www.if-not-true-then-false.com/2012/solarized-linux/
+in .bashrc, to get colours for the prompt
+PS1="\u \w $(git branch 2>/dev/null | sed -n "s/* \(.*\)/\1 /p")$ "
+
+PS1='\[\e[32m\u\] \[\e[36m\w\] \[\e[33m\]\[\e[1m\]$ \[\e[0m\]'
+
 ## MacOS setup
 *todo:*
 
