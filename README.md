@@ -114,12 +114,13 @@ PS1='\[\e[32m\u\] \[\e[36m\w\] \[\e[33m\]\[\e[1m\]$ \[\e[0m\]'
 - Slack
 - git https://git-scm.com/download/mac
   - git lfs ??
-  - git setup todo
+  - git setup todo https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
 - Visual Studio Code https://code.visualstudio.com/docs/?dv=osx
   - todo: typical extentions used??
 - todo: alias to do
 - todo: iTerm
 - todo: node, python, cmake, docker
+- Chrome, https://www.google.com.au/chrome/, and make default
 
 Finder preferences
 - Show Hard disks & External disks on the desktop (especially if set up with bootcamp)
