@@ -116,9 +116,10 @@ PS1='\[\e[32m\u\] \[\e[36m\w\] \[\e[33m\]\[\e[1m\]$ \[\e[0m\]'
   - git lfs ??
   - git setup todo
 - Visual Studio Code https://code.visualstudio.com/docs/?dv=osx
-  - typical extentions used??
-- alias to do
-- iterm
+  - todo: typical extentions used??
+- todo: alias to do
+- todo: iTerm
+- todo: node, python, cmake
 
 ## Window setup
 *todo:*
