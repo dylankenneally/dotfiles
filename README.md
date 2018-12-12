@@ -119,7 +119,7 @@ PS1='\[\e[32m\u\] \[\e[36m\w\] \[\e[33m\]\[\e[1m\]$ \[\e[0m\]'
   - todo: typical extentions used??
 - todo: alias to do
 - todo: iTerm
-- todo: node, python, cmake
+- todo: node, python, cmake, docker
 
 Finder preferences
 - Show Hard disks & External disks on the desktop (especially if set up with bootcamp)
