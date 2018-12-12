@@ -121,6 +121,11 @@ PS1='\[\e[32m\u\] \[\e[36m\w\] \[\e[33m\]\[\e[1m\]$ \[\e[0m\]'
 - todo: iTerm
 - todo: node, python, cmake
 
+Finder preferences
+- Show Hard disks & External disks on the desktop (especially if set up with bootcamp)
+- Open New Finder windows in the home folder
+- Sidebar, removel anything that you don't really use (Recents, AirDrop, Applications, iCloud, Tags) & add what you do use (Movies, Music, Pictures, Home folder)
+
 ## Window setup
 *todo:*
 
