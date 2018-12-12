@@ -110,6 +110,15 @@ PS1='\[\e[32m\u\] \[\e[36m\w\] \[\e[33m\]\[\e[1m\]$ \[\e[0m\]'
 
 ## MacOS setup
 *todo:*
+- System updates
+- Slack
+- git https://git-scm.com/download/mac
+  - git lfs ??
+  - git setup todo
+- Visual Studio Code https://code.visualstudio.com/docs/?dv=osx
+  - typical extentions used??
+- alias to do
+- iterm
 
 ## Window setup
 *todo:*
