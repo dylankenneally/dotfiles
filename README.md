@@ -112,10 +112,11 @@ PS1='\[\e[32m\u\] \[\e[36m\w\] \[\e[33m\]\[\e[1m\]$ \[\e[0m\]'
 *todo:*
 
 ## Window setup
-*todo:*
-cppcheck
-procexp
-depends
+Download the following to a utils folder, and update the `PATH` environment variable to point to that folder
+- [7-zip](https://www.7-zip.org/download.html)
+- [Dependency Walker](http://www.dependencywalker.com/)
+- [Process Explorer](https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer)
+- [Cpp Check](http://cppcheck.sourceforge.net/)
 
 ## Docker containers for automated builds
 *todo:*
