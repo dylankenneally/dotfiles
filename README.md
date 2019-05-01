@@ -119,9 +119,10 @@ PS1='\[\e[32m\u\] \[\e[36m\w\] \[\e[33m\]\[\e[1m\]$ \[\e[0m\]'
   - config
 - Visual Studio Code https://code.visualstudio.com/docs/?dv=osx
   - todo: typical extentions used??
+  - https://code.visualstudio.com/docs/setup/mac, get code in the path (`~/.bash_profile`)
 - todo: alias to do
 - todo: iTerm
-- todo: node, python, cmake, docker
+- todo: node (https://nodejs.org/en/), python, cmake, docker
 - Chrome, https://www.google.com.au/chrome/, and make default
 
 Finder preferences
