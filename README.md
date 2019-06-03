@@ -110,6 +110,25 @@ PS1='\[\e[32m\u\] \[\e[36m\w\] \[\e[33m\]\[\e[1m\]$ \[\e[0m\]'
 
 ## MacOS setup
 *todo:*
+- System updates
+- Slack
+- git https://git-scm.com/download/mac
+  - git lfs ??
+  - git setup todo https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
+  - ssh keys
+  - config
+- Visual Studio Code https://code.visualstudio.com/docs/?dv=osx
+  - todo: typical extentions used??
+  - https://code.visualstudio.com/docs/setup/mac, get code in the path (`~/.bash_profile`)
+- todo: alias to do
+- todo: iTerm
+- todo: node (https://nodejs.org/en/), python, cmake, docker
+- Chrome, https://www.google.com.au/chrome/, and make default
+
+Finder preferences
+- Show Hard disks & External disks on the desktop (especially if set up with bootcamp)
+- Open New Finder windows in the home folder
+- Sidebar, removel anything that you don't really use (Recents, AirDrop, Applications, iCloud, Tags) & add what you do use (Movies, Music, Pictures, Home folder)
 
 ## Window setup
 Download the following to a utils folder, and update the `PATH` environment variable to point to that folder
