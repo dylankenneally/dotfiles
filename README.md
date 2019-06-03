@@ -136,6 +136,11 @@ Download the following to a utils folder, and update the `PATH` environment vari
 - [Dependency Walker](http://www.dependencywalker.com/)
 - [Process Explorer](https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer)
 - [Cpp Check](http://cppcheck.sourceforge.net/)
+- [WinDiff / WinMerge](https://portableapps.com/apps/utilities/winmerge_portable)
+  - Note that this comes as `WinMergePortable.exe`, to use as `windiff` create a batch file with the following content in the same directory as the executable, `%*` passes all arguments given to `windiff.cmd` to `WinMergePortable`
+```bash
+WinMergePortable %*
+```
 
 ## Docker containers for automated builds
 *todo:*
