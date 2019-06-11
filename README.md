@@ -133,6 +133,7 @@ Finder preferences
 ## Window setup
 Download the following to a utils folder, and update the `PATH` environment variable to point to that folder
 - [7-zip](https://www.7-zip.org/download.html)
+- [curl](https://curl.haxx.se/windows/)
 - [Dependency Walker](http://www.dependencywalker.com/)
 - [Process Explorer](https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer)
 - [Cpp Check](http://cppcheck.sourceforge.net/)
