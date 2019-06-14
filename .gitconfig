@@ -1,0 +1,32 @@
+# This is Git's per-user configuration file.
+[user]
+[alias]
+	st = status
+	br = branch
+	co = checkout
+	ci = commit -a -m
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	lol = log --pretty=oneline --abbrev-commit --graph --decorate
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	su = submodule update --init --recursive
+	remotes = remote -v
+[help]
+	autocorrect = 0
+
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan

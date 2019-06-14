@@ -1,5 +1,5 @@
 # git setup
-Typical command aliases/settings I use with git.
+Typical command aliases/settings I use with git. Also in this repo is [`.gitconfig`](./.gitconfig), which can be placed in the home (`~`) directory to automatically set these up, as well as default git colours I use.
 
 ```bash
 # been bitten too many times with autocorrect - turning it off
