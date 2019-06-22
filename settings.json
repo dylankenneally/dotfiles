@@ -1,0 +1,17 @@
+{
+    "editor.renderWhitespace": "all",
+	"editor.insertSpaces": false,
+    "cSpell.language": "en-GB",
+    "window.zoomLevel": 0,
+    "[javascriptreact]": {
+        "editor.tabSize": 4,
+    },
+    "[javascript]": {
+        "editor.tabSize": 4,
+    },
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "files.associations": {
+        ".bash_prompt": "shellscript"
+    }
+}

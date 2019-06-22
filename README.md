@@ -4,6 +4,7 @@
 
 - Default editors
   - [Visual Studio Code](https://code.visualstudio.com/) on most systems, particularly for JavaScript/Python work
+    - [Settings file](./settings.json)
   - [Sublime Text](https://www.sublimetext.com/) on older Linux distro's that can't run code
   - [Visual Studio](https://visualstudio.microsoft.com/) on Windows for C++ etc
   - [Xcode](https://developer.apple.com/xcode/) on macOS for C++ etc
