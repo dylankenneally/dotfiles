@@ -1,17 +1,37 @@
 {
-    "editor.renderWhitespace": "all",
-	"editor.insertSpaces": false,
-    "cSpell.language": "en-GB",
-    "window.zoomLevel": 0,
-    "[javascriptreact]": {
-        "editor.tabSize": 4,
+    "terminal.integrated.shell.windows": "c:\\Program Files\\git\\bin\\bash.exe",
+    "window.zoomLevel": -1,
+    "workbench.sideBar.location": "left",
+    "python.linting.pylintArgs": [
+        "--disable=W0702",
+        "--disable=W0312",
+        "--disable=C0103",
+        "--disable=C0301",
+        "--disable=C0330",
+        "--disable=C0111"
+    ],
+	"editor.renderWhitespace": "all",
+    "[sass]": {
+        "editor.tabSize": 2
     },
     "[javascript]": {
         "editor.tabSize": 4,
+        "editor.insertSpaces": false
     },
+    "[javascriptreact]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": false
+    },
+    "editor.detectIndentation": false,
+    "cSpell.language": "en-GB",
+    "cSpell.userWords": [
+    ],
+    "diffEditor.ignoreTrimWhitespace": false,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
-    "files.associations": {
-        ".bash_prompt": "shellscript"
-    }
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "breadcrumbs.enabled": true,
+    "cppcheck.cppcheckPath": "C:\\Program Files\\Cppcheck\\cppcheck.exe",
+    "cppcheck.lintingEnabled": true,
+    "files.autoSave": "off"
 }
