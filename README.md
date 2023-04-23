@@ -12,7 +12,9 @@ Here to make it easier for me to setup new developer environments quickly, _prob
 - [Chrome](https://www.google.com/intl/en_au/chrome/)
 - [Docker](https://www.docker.com/)
 
-## Installing dotfiles
+## tl;dr: once the above are installed, run this for a quick setup
+
+### Installing dotfiles
 
 **NB:** this _replaces_ the systems current dotfiles.
 
@@ -23,7 +25,7 @@ cp .bashrc ~/.bashrc
 cp .gitconfig ~/.gitconfig
 ```
 
-## Installing common packages/settings
+### Installing common packages/settings
 
 ```bash
 brew bundle
@@ -31,6 +33,8 @@ pip install -r requirements.txt
 source ./install_vscode_extensions.sh
 cp settings.json ~/Library/Application\ Support/Code/User/settings.json
 ```
+
+## Details: once the software above is installed, run this for a typical setup
 
 ### After Brew has been installed (on macOS)
 
