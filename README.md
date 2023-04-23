@@ -55,6 +55,8 @@ The following packages are installed via `brew`, to install all of them run `bre
 - tree: Display directories as trees (with optional color/HTML output)
 - wget: Internet file retriever
 
+To generate the above list, run `brew leaves | xargs -n1 brew desc --eval-all`.
+
 #### Working with Brewfile's
 
 ```bash
