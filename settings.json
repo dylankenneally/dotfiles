@@ -1,37 +1,96 @@
 {
-    "terminal.integrated.shell.windows": "c:\\Program Files\\git\\bin\\bash.exe",
-    "window.zoomLevel": -1,
-    "workbench.sideBar.location": "left",
-    "python.linting.pylintArgs": [
-        "--disable=W0702",
-        "--disable=W0312",
-        "--disable=C0103",
-        "--disable=C0301",
-        "--disable=C0330",
-        "--disable=C0111"
-    ],
-	"editor.renderWhitespace": "all",
-    "[sass]": {
-        "editor.tabSize": 2
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.insertSpaces": false,
+    "editor.tabSize": 4
+  },
+  "[javascriptreact]": {
+    "editor.insertSpaces": false,
+    "editor.tabSize": 4
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.customDictionaries": {
+    "custom-dictionary-user": {
+      "addWords": true,
+      "name": "custom-dictionary-user",
+      "path": "~/.cspell/custom-dictionary-user.txt",
+      "scope": "user"
+    }
+  },
+  "cSpell.language": "en-GB",
+  "cSpell.userWords": [
+    "Bunnings",
+    "dylankenneally",
+    "Kenneally"
+  ],
+  "editor.accessibilitySupport": "off",
+  "editor.fontSize": 16,
+  "editor.renderWhitespace": "all",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "markdown-preview-enhanced.enableExtendedTableSyntax": true,
+  "markdown-preview-enhanced.previewTheme": "atom-light.css",
+  "markdown.extension.italic.indicator": "_",
+  "markdown.extension.orderedList.marker": "one",
+  "markdownlint.config": {
+    "MD033": false
+  },
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "todohighlight.isCaseSensitive": false,
+  "todohighlight.isEnable": true,
+  "todohighlight.keywords": [
+    {
+      "backgroundColor": "rgb(240,98,146)",
+      "color": "white",
+      "text": "DYLAN:"
     },
-    "[javascript]": {
-        "editor.tabSize": 4,
-        "editor.insertSpaces": false
+    {
+      "backgroundColor": "rgb(240,98,146)",
+      "color": "white",
+      "text": "TODO:"
     },
-    "[javascriptreact]": {
-        "editor.tabSize": 4,
-        "editor.insertSpaces": false
-    },
-    "editor.detectIndentation": false,
-    "cSpell.language": "en-GB",
-    "cSpell.userWords": [
-    ],
-    "diffEditor.ignoreTrimWhitespace": false,
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "breadcrumbs.enabled": true,
-    "cppcheck.cppcheckPath": "C:\\Program Files\\Cppcheck\\cppcheck.exe",
-    "cppcheck.lintingEnabled": true,
-    "files.autoSave": "off"
+    {
+      "backgroundColor": "rgb(240,98,146)",
+      "color": "white",
+      "text": "FIXME:"
+    }
+  ],
+  "window.commandCenter": true,
+  "workbench.editorAssociations": {
+    "*.rtf": "default"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "cSpell.enableFiletypes": [
+    "ignore",
+    "nunjucks",
+    "properties",
+    "shellscript"
+  ],
+  "git.enableSmartCommit": true,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.tabSize": 2
 }

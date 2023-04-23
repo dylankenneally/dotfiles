@@ -1,32 +1,22 @@
-# This is Git's per-user configuration file.
 [user]
+	name = Dylan Kenneally
+	email = github@dylankenneally.com
+	signingkey = B571DEA9D521E804
+[help]
+	autocorrect = 0
 [alias]
 	st = status
 	br = branch
 	co = checkout
-	ci = commit -a -m
+	ci = commit -S -a -m
+	ci2 = commit -S -m
+	su = submodule update --init --recursive
+	alias = !git config --list | grep --color=auto ^alias\\.
+	remotes = remote -v
 	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 	lol = log --pretty=oneline --abbrev-commit --graph --decorate
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	su = submodule update --init --recursive
-	remotes = remote -v
-[help]
-	autocorrect = 0
-
-[color]
-	branch = auto
-	diff = auto
-	status = auto
-[color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
-[color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
-[color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = master
