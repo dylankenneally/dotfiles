@@ -72,7 +72,7 @@ leakcheck==1.0.0
 linkedin-api==2.0.0a5
 lockfile==0.12.2
 loguru==0.6.0
-lxml==4.8.0
+lxml==4.9.1
 machinae==1.4.9
 maigret==0.4.3
 MarkupSafe==2.0.1
