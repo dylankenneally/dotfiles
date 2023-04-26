@@ -23,6 +23,7 @@ Here to make it easier for me to setup new developer environments quickly, _prob
 cp .bash_profile ~/.bash_profile
 cp .bashrc ~/.bashrc
 cp .gitconfig ~/.gitconfig
+cp .editorconfig ~/.editorconfig
 ```
 
 ### Installing common packages/settings
@@ -100,6 +101,10 @@ Place the [settings file](./settings.json) in the following locations:
 - macOS `$HOME/Library/Application\ Support/Code/User/settings.json`
 - Linux `$HOME/.config/Code/User/settings.json`
 - Windows `%APPDATA%\Code\User\settings.json`
+
+### Working with editors (including Visual Studio Code)
+
+There is a default [editorconfig](https://editorconfig.org/) file in [this repo](.editorconfig), with sensible overrides - particularly if you are using [Prettier](https://prettier.io/). Simple copy it to your code location (or your home directory).
 
 ### Working with Docker
 
