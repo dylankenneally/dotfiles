@@ -38,7 +38,10 @@
   "cSpell.userWords": [
     "Bunnings",
     "dylankenneally",
-    "Kenneally"
+    "epicormic",
+    "Kenneally",
+    "SERP",
+    "tidbits"
   ],
   "editor.accessibilitySupport": "off",
   "editor.fontSize": 16,
@@ -59,17 +62,27 @@
   "todohighlight.isEnable": true,
   "todohighlight.keywords": [
     {
-      "backgroundColor": "rgb(240,98,146)",
+      "backgroundColor": "red",
+      "color": "white",
+      "text": "BUG:"
+    },
+    {
+      "backgroundColor": "green",
       "color": "white",
       "text": "DYLAN:"
     },
     {
-      "backgroundColor": "rgb(240,98,146)",
+      "backgroundColor": "green",
       "color": "white",
       "text": "TODO:"
     },
     {
-      "backgroundColor": "rgb(240,98,146)",
+      "backgroundColor": "yellow",
+      "color": "black",
+      "text": "WARN:"
+    },
+    {
+      "backgroundColor": "red",
       "color": "white",
       "text": "FIXME:"
     }
@@ -92,5 +105,8 @@
     "editor.formatOnType": true
   },
   "diffEditor.ignoreTrimWhitespace": false,
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "emmet.includeLanguages": {
+    "nunjucks": "html"
+  }
 }
