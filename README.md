@@ -2,17 +2,11 @@
 
 Here to make it easier for me to setup new developer environments quickly, _probably of no use to anyone but me._
 
-## todo:
+## Quick setup (recommended)
 
-- [ ] script to install all the software in one hit
-- [ ] aliases
-- [ ] mac tools (rect, hidden bar, etc)
-- [ ] separate notes on mobile (react native, xcode, adk, jdk)??
-- [ ] cron job to auto check for updates to local files?
-- [ ] android development studio, https://reactnative.dev/docs/environment-setup?guide=native&platform=android
-- [ ] expo
+Quick setup details: software to install, config/dotfiles & packages
 
-## Software to install
+### Software to install
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Git](https://git-scm.com/)
@@ -22,9 +16,7 @@ Here to make it easier for me to setup new developer environments quickly, _prob
 - [Chrome](https://www.google.com/intl/en_au/chrome/)
 - [Docker](https://www.docker.com/)
 
-## tl;dr: once the above are installed, run this for a quick setup
-
-### Installing dotfiles
+### dotfiles to copy over
 
 **NB:** this _replaces_ the systems current dotfiles.
 
@@ -36,7 +28,7 @@ cp .gitconfig ~/.gitconfig
 cp .editorconfig ~/.editorconfig
 ```
 
-### Installing common packages/settings
+### Install commonly used packages & settings
 
 ```bash
 brew bundle
@@ -45,9 +37,11 @@ source ./install_vscode_extensions.sh
 cp settings.json ~/Library/Application\ Support/Code/User/settings.json
 ```
 
-## Details: once the software above is installed, run this for a typical setup
+## Detailed setup
 
-### After Brew has been installed (on macOS)
+Install the software above, then cherry pick from below
+
+### Typical brew packages
 
 The following packages are installed via `brew`, to install all of them run `brew bundle` - this will install them from the [Brewfile](./Brewfile).
 
@@ -75,13 +69,14 @@ To generate the above list, run `brew leaves | xargs -n1 brew desc --eval-all`.
 
 ```bash
 # creates Brewfile in the current directory from currently-installed packages
+rm Brewfile # brew won't override the file by default
 brew bundle dump
 
 # install everything from the Brewfile
 brew bundle
 ```
 
-### After Python has been installed
+### Typical python packages
 
 Typical python packages are listed in [requirements.txt](./requirements.txt).
 
@@ -99,15 +94,13 @@ pip freeze > requirements.txt
 pip install -r requirements.txt
 ```
 
-### After Visual Studio Code has been installed (on macOS)
-
-#### Install typical extensions
+### Typical Visual Studio Code extensions
 
 Typical python packages are listed in [vscode.extensions](./vscode.extensions), and can be installed by running [`source ./install_vscode_extensions.sh`](./install_vscode_extensions.sh).
 
 To update the extensions list: `code --list-extensions > vscode.extensions`.
 
-#### Install typical settings
+### Typical Visual Studio Code settings
 
 Place the [settings file](./settings.json) in the following locations:
 
@@ -140,7 +133,7 @@ dockermappedshell nginx
 dockermappedshell your-container
 ```
 
-## Windows OS
+### Working on Windows OS
 
 Been a few years since I've developed on Windows, the below was handy then, may be handy in future.
 
