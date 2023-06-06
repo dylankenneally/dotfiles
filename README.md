@@ -1,6 +1,16 @@
-# dotfiles and notes my dev env
+# dotfiles and notes on my dev env
 
 Here to make it easier for me to setup new developer environments quickly, _probably of no use to anyone but me._
+
+## todo:
+
+- [ ] script to install all the software in one hit
+- [ ] aliases
+- [ ] mac tools (rect, hidden bar, etc)
+- [ ] separate notes on mobile (react native, xcode, adk, jdk)??
+- [ ] cron job to auto check for updates to local files?
+- [ ] android development studio, https://reactnative.dev/docs/environment-setup?guide=native&platform=android
+- [ ] expo
 
 ## Software to install
 
@@ -19,7 +29,7 @@ Here to make it easier for me to setup new developer environments quickly, _prob
 **NB:** this _replaces_ the systems current dotfiles.
 
 ```bash
-# copy dotfiles to the repo
+# copy dotfiles from the repo
 cp .bash_profile ~/.bash_profile
 cp .bashrc ~/.bashrc
 cp .gitconfig ~/.gitconfig
@@ -46,14 +56,17 @@ The following packages are installed via `brew`, to install all of them run `bre
 - exa: Modern replacement for 'ls'
 - git: Distributed revision control system
 - gnupg: GNU Pretty Good Privacy (PGP) package
+- guile: GNU Ubiquitous Intelligent Language for Extensions
 - htop: Improved top (interactive process viewer)
 - httpie: User-friendly cURL replacement (command-line HTTP client)
 - imagemagick: Tools and libraries to manipulate images in many formats
 - nginx: HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
+- python@3.10: Interpreted, interactive, object-oriented programming language
 - rename: Perl-powered file rename script with many helpful built-ins
 - thefuck: Programmatically correct mistyped console commands
 - tldr: Simplified and community-driven man pages
 - tree: Display directories as trees (with optional color/HTML output)
+- watchman: Watch files and take action when they change
 - wget: Internet file retriever
 
 To generate the above list, run `brew leaves | xargs -n1 brew desc --eval-all`.
@@ -142,6 +155,14 @@ Been a few years since I've developed on Windows, the below was handy then, may 
 ## Updating this repo
 
 When new items are installed/removed from your dev env, or just periodically, run the following to update this repo with a snapshot of the current system
+
+```bash
+source ./update-repo.sh
+```
+
+### Updating only parts
+
+Take your pick from the following:
 
 ```bash
 # copy dotfiles to the repo

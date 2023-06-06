@@ -8,6 +8,9 @@ export PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/
 PATH="/Library/Frameworks/Python.framework/Versions/3.10/bin:${PATH}"
 export PATH
 
+# Java Development Kit, via Zulu, ref: https://reactnative.dev/docs/environment-setup?guide=native&platform=android
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
+
 # silence apple message about switching to zsh (z shell), I'm happy with bash, which I keep up to date, https://itnext.io/upgrading-bash-on-macos-7138bd1066ba
 export BASH_SILENCE_DEPRECATION_WARNING=1
 

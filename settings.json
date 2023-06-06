@@ -96,6 +96,7 @@
   },
   "cSpell.enableFiletypes": [
     "ignore",
+    "njk",
     "nunjucks",
     "properties",
     "shellscript"
@@ -104,9 +105,16 @@
   "[python]": {
     "editor.formatOnType": true
   },
-  "diffEditor.ignoreTrimWhitespace": false,
   "editor.tabSize": 2,
   "emmet.includeLanguages": {
     "nunjucks": "html"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": false,
+    "scminput": false
   }
 }
