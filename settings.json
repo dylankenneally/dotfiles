@@ -95,6 +95,8 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "cSpell.enableFiletypes": [
+    "!yml",
+    "github-actions-workflow",
     "ignore",
     "njk",
     "nunjucks",
@@ -109,12 +111,13 @@
   "emmet.includeLanguages": {
     "nunjucks": "html"
   },
-  "diffEditor.ignoreTrimWhitespace": false,
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
     "*": true,
     "plaintext": true,
-    "markdown": false,
+    "markdown": true,
     "scminput": false
-  }
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "window.zoomLevel": -1
 }

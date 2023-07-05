@@ -9,6 +9,8 @@ EditorConfig.EditorConfig
 esbenp.prettier-vscode
 eseom.nunjucks-template
 GitHub.copilot
+GitHub.copilot-chat
+github.vscode-github-actions
 golang.go
 GrapeCity.gc-excelviewer
 jsynowiec.vscode-insertdatestring
@@ -25,6 +27,7 @@ okitavera.vscode-nunjucks-formatter
 ronnidc.nunjucks
 shd101wyy.markdown-preview-enhanced
 streetsidesoftware.code-spell-checker
+stylelint.vscode-stylelint
 VisualStudioExptTeam.intellicode-api-usage-examples
 VisualStudioExptTeam.vscodeintellicode
 wayou.vscode-todo-highlight

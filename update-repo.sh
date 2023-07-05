@@ -15,4 +15,7 @@ code --list-extensions > vscode.extensions
 cp ~/Library/Application\ Support/Code/User/settings.json .
 
 # copy aliases
-alias > ./aliases.sh
+
+echo "#!/bin/sh" > ./aliases.sh
+echo "" >> ./aliases.sh
+alias >> ./aliases.sh
