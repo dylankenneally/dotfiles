@@ -105,7 +105,7 @@ pycares==4.2.1
 pycountry==22.1.10
 pycparser==2.21
 pycryptodome==3.15.0
-Pygments==2.12.0
+Pygments==2.15.0
 pylev==1.4.0
 pyobjc==8.5
 pyobjc-core==8.5
