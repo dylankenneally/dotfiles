@@ -17,11 +17,17 @@
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
   "[less]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.formatOnType": true
   },
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -34,6 +40,15 @@
       "scope": "user"
     }
   },
+  "cSpell.enableFiletypes": [
+    "!yml",
+    "github-actions-workflow",
+    "ignore",
+    "njk",
+    "nunjucks",
+    "properties",
+    "shellscript"
+  ],
   "cSpell.language": "en-GB",
   "cSpell.userWords": [
     "Bunnings",
@@ -43,11 +58,24 @@
     "SERP",
     "tidbits"
   ],
+  "diffEditor.ignoreTrimWhitespace": false,
   "editor.accessibilitySupport": "off",
   "editor.fontSize": 16,
+  "editor.inlineSuggest.enabled": true,
   "editor.renderWhitespace": "all",
+  "editor.tabSize": 2,
+  "emmet.includeLanguages": {
+    "nunjucks": "html"
+  },
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "git.enableSmartCommit": true,
+  "github.copilot.enable": {
+    "*": true,
+    "markdown": true,
+    "plaintext": true,
+    "scminput": false
+  },
   "markdown-preview-enhanced.enableExtendedTableSyntax": true,
   "markdown-preview-enhanced.previewTheme": "atom-light.css",
   "markdown.extension.italic.indicator": "_",
@@ -55,6 +83,7 @@
   "markdownlint.config": {
     "MD033": false
   },
+  "security.workspace.trust.untrustedFiles": "open",
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
   },
@@ -91,33 +120,5 @@
   "workbench.editorAssociations": {
     "*.rtf": "default"
   },
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "cSpell.enableFiletypes": [
-    "!yml",
-    "github-actions-workflow",
-    "ignore",
-    "njk",
-    "nunjucks",
-    "properties",
-    "shellscript"
-  ],
-  "git.enableSmartCommit": true,
-  "[python]": {
-    "editor.formatOnType": true
-  },
-  "editor.tabSize": 2,
-  "emmet.includeLanguages": {
-    "nunjucks": "html"
-  },
-  "editor.inlineSuggest.enabled": true,
-  "github.copilot.enable": {
-    "*": true,
-    "plaintext": true,
-    "markdown": true,
-    "scminput": false
-  },
-  "diffEditor.ignoreTrimWhitespace": false,
-  "window.zoomLevel": -1
+  "redhat.telemetry.enabled": true
 }

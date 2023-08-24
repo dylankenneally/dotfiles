@@ -15,6 +15,7 @@ golang.go
 GrapeCity.gc-excelviewer
 jsynowiec.vscode-insertdatestring
 kameshkotwani.google-search
+lokalise.i18n-ally
 meronz.manpages
 mongodb.mongodb-vscode
 ms-azuretools.vscode-docker
@@ -24,12 +25,18 @@ ms-python.vscode-pylance
 ms-vscode-remote.remote-containers
 ms-vscode.cpptools
 okitavera.vscode-nunjucks-formatter
+redhat.java
 ronnidc.nunjucks
 shd101wyy.markdown-preview-enhanced
 streetsidesoftware.code-spell-checker
 stylelint.vscode-stylelint
 VisualStudioExptTeam.intellicode-api-usage-examples
 VisualStudioExptTeam.vscodeintellicode
+vscjava.vscode-java-debug
+vscjava.vscode-java-dependency
+vscjava.vscode-java-pack
+vscjava.vscode-java-test
+vscjava.vscode-maven
 wayou.vscode-todo-highlight
 withfig.fig
 yzhang.markdown-all-in-one
