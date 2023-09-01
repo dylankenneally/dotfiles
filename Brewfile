@@ -11,6 +11,7 @@ brew "aom"
 brew "bash"
 brew "bat"
 brew "openssl@3", link: false
+brew "cocoapods"
 brew "exa"
 brew "openjpeg"
 brew "ghostscript"

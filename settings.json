@@ -58,7 +58,6 @@
     "SERP",
     "tidbits"
   ],
-  "diffEditor.ignoreTrimWhitespace": false,
   "editor.accessibilitySupport": "off",
   "editor.fontSize": 16,
   "editor.inlineSuggest.enabled": true,
@@ -120,5 +119,6 @@
   "workbench.editorAssociations": {
     "*.rtf": "default"
   },
-  "redhat.telemetry.enabled": true
+  "redhat.telemetry.enabled": true,
+  "terminal.integrated.defaultProfile.osx": "bash"
 }
