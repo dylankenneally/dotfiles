@@ -28,5 +28,8 @@ export GPG_TTY=$(tty)
 # setup the interactive shell
 test -f ~/.bashrc && builtin source ~/.bashrc
 
+# ruby environment manager (for React Native iOS builds etc)
+eval "$(rbenv init - bash)"
+
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/bash_profile.post.bash" ]] && builtin source "$HOME/.fig/shell/bash_profile.post.bash"
