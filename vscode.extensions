@@ -17,6 +17,7 @@ jsynowiec.vscode-insertdatestring
 kameshkotwani.google-search
 lokalise.i18n-ally
 mariomatheu.syntax-project-pbxproj
+mechatroner.rainbow-csv
 meronz.manpages
 mongodb.mongodb-vscode
 ms-azuretools.vscode-docker
@@ -31,6 +32,7 @@ ronnidc.nunjucks
 shd101wyy.markdown-preview-enhanced
 streetsidesoftware.code-spell-checker
 stylelint.vscode-stylelint
+tamasfe.even-better-toml
 VisualStudioExptTeam.intellicode-api-usage-examples
 VisualStudioExptTeam.vscodeintellicode
 vscjava.vscode-java-debug
