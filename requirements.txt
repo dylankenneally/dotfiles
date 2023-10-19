@@ -302,3 +302,4 @@ xhtml2pdf==0.2.5
 XMind==1.2.0
 yarl==1.7.2
 zstandard==0.18.0
+python-dotenv==1.0.0

@@ -32,7 +32,7 @@ cp .editorconfig ~/.editorconfig
 
 ```bash
 brew bundle
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 source ./install_vscode_extensions.sh
 cp settings.json ~/Library/Application\ Support/Code/User/settings.json
 ```
@@ -81,17 +81,17 @@ brew bundle
 Typical python packages are listed in [requirements.txt](./requirements.txt).
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 #### Working with `requirements.txt`
 
 ```bash
 # create a requirements file in the current directory from currently-installed packages
-pip freeze > requirements.txt
+pip3 freeze > requirements.txt
 
 # install everything from the requirements file
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ### Typical Visual Studio Code extensions
@@ -165,7 +165,7 @@ cp ~/.gitconfig .
 
 # update package files
 brew bundle dump
-pip freeze > requirements.txt
+pip3 freeze > requirements.txt
 code --list-extensions > vscode.extensions
 
 # copy settings files

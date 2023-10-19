@@ -120,5 +120,25 @@
     "*.rtf": "default"
   },
   "redhat.telemetry.enabled": true,
-  "terminal.integrated.defaultProfile.osx": "bash"
+  "terminal.integrated.defaultProfile.osx": "bash",
+  "mssql.connections": [
+    {
+      "server": "10.128.104.228",
+      "database": "",
+      "authenticationType": "SqlLogin",
+      "user": "service.vsm",
+      "password": "",
+      "emptyPasswordInput": false,
+      "savePassword": true,
+      "profileName": "AiVA install app",
+      "encrypt": "Mandatory",
+      "trustServerCertificate": true,
+      "connectTimeout": 15,
+      "commandTimeout": 30,
+      "applicationName": "vscode-mssql"
+    }
+  ],
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
