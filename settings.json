@@ -71,8 +71,8 @@
   "git.enableSmartCommit": true,
   "github.copilot.enable": {
     "*": true,
-    "markdown": true,
     "plaintext": true,
+    "markdown": true,
     "scminput": false
   },
   "markdown-preview-enhanced.enableExtendedTableSyntax": true,
@@ -139,6 +139,10 @@
     }
   ],
   "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
