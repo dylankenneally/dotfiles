@@ -12,7 +12,7 @@ export PATH
 export PATH=$PATH:~/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin
 
 # Java Development Kit, via Zulu, ref: https://reactnative.dev/docs/environment-setup?guide=native&platform=android
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 
 # Android development, ref: https://reactnative.dev/docs/environment-setup?guide=native&platform=android
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -46,6 +46,9 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools/
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin/
 export PATH=$PATH:$ANDROID_HOME/build-tools
 export PATH=$PATH:$ANDROID_HOME/emulator/
+
+# Speedshield npm token, do not commit to git
+export NPM_TOKEN=REDACTED
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/bash_profile.post.bash" ]] && builtin source "$HOME/.fig/shell/bash_profile.post.bash"
