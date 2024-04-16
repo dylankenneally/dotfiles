@@ -32,6 +32,12 @@
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "cSpell.customDictionaries": {
     "custom-dictionary-user": {
       "addWords": true,
@@ -58,7 +64,9 @@
     "SERP",
     "tidbits"
   ],
+  "diffEditor.ignoreTrimWhitespace": false,
   "editor.accessibilitySupport": "off",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontSize": 16,
   "editor.inlineSuggest.enabled": true,
   "editor.renderWhitespace": "all",
@@ -71,8 +79,8 @@
   "git.enableSmartCommit": true,
   "github.copilot.enable": {
     "*": true,
-    "plaintext": true,
     "markdown": true,
+    "plaintext": true,
     "scminput": false
   },
   "markdown-preview-enhanced.enableExtendedTableSyntax": true,
@@ -82,9 +90,29 @@
   "markdownlint.config": {
     "MD033": false
   },
+  "mssql.connections": [
+    {
+      "applicationName": "vscode-mssql",
+      "authenticationType": "SqlLogin",
+      "commandTimeout": 30,
+      "connectTimeout": 15,
+      "database": "",
+      "emptyPasswordInput": false,
+      "encrypt": "Mandatory",
+      "password": "",
+      "profileName": "AiVA install app",
+      "savePassword": true,
+      "server": "10.128.104.228",
+      "trustServerCertificate": true,
+      "user": "service.vsm"
+    }
+  ],
+  "redhat.telemetry.enabled": true,
   "security.workspace.trust.untrustedFiles": "open",
+  "terminal.integrated.defaultProfile.osx": "bash",
   "terminal.integrated.env.osx": {
-    "FIG_NEW_SESSION": "1"
+    "FIG_NEW_SESSION": "1",
+    "CW_NEW_SESSION": "1"
   },
   "todohighlight.isCaseSensitive": false,
   "todohighlight.isEnable": true,
@@ -118,32 +146,5 @@
   "window.commandCenter": true,
   "workbench.editorAssociations": {
     "*.rtf": "default"
-  },
-  "redhat.telemetry.enabled": true,
-  "terminal.integrated.defaultProfile.osx": "bash",
-  "mssql.connections": [
-    {
-      "server": "10.128.104.228",
-      "database": "",
-      "authenticationType": "SqlLogin",
-      "user": "service.vsm",
-      "password": "",
-      "emptyPasswordInput": false,
-      "savePassword": true,
-      "profileName": "AiVA install app",
-      "encrypt": "Mandatory",
-      "trustServerCertificate": true,
-      "connectTimeout": 15,
-      "commandTimeout": 30,
-      "applicationName": "vscode-mssql"
-    }
-  ],
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "diffEditor.ignoreTrimWhitespace": false,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
