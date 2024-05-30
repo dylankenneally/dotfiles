@@ -1,6 +1,7 @@
 #!/bin/sh
 
 alias ..='cd ..'
+alias ...='cd ../..'
 alias cat='bat'
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 alias cls='clear'
