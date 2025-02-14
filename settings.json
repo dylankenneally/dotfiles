@@ -77,6 +77,7 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "git.enableSmartCommit": true,
+  "github.copilot.editor.enableAutoCompletions": true,
   "github.copilot.enable": {
     "*": true,
     "markdown": true,
@@ -147,6 +148,5 @@
   "window.commandCenter": true,
   "workbench.editorAssociations": {
     "*.rtf": "default"
-  },
-  "github.copilot.editor.enableAutoCompletions": true,
+  }
 }
