@@ -1,14 +1,16 @@
-# Q pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/bashrc.pre.bash" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/bashrc.pre.bash"
+# Kiro CLI pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/bashrc.pre.bash" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/bashrc.pre.bash"
+
 # lazy navigation
 alias ..="cd .."
+alias ...='cd ../..'
 
 # show all files (-a), in list format (-l), with annotation for types (-F) and colorized output (--color=always)
 # NB: don't use -G for colour output, as -G means grid in exa (below)
 alias ll='ls -alF --color=always'
 
-# use exa instead of ls, https://the.exa.website/
-alias ls=exa
+# use eza instead of ls, https://eza.rocks/
+alias ls=eza
 
 # use bat instead of cat, https://github.com/sharkdp/bat
 alias cat=bat
@@ -72,8 +74,7 @@ export PS2="\[$(tput setaf 5)\]\$(get_shell_count_display)➜➜ \[$(tput sgr0)\
 
 eval "$(thefuck --alias)"
 
-
 [[ -f "$HOME/fig-export/dotfiles/dotfile.bash" ]] && source "$HOME/fig-export/dotfiles/dotfile.bash"
 
-# Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/bashrc.post.bash" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/bashrc.post.bash"
+# Kiro CLI post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/bashrc.post.bash" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/bashrc.post.bash"
