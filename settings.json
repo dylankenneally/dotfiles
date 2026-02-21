@@ -3,7 +3,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -64,7 +64,7 @@
     "SERP",
     "tidbits"
   ],
-  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.ignoreTrimWhitespace": true,
   "editor.accessibilitySupport": "off",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontSize": 16,
@@ -148,5 +148,7 @@
   "window.commandCenter": true,
   "workbench.editorAssociations": {
     "*.rtf": "default"
-  }
+  },
+  "chat.viewSessions.orientation": "stacked",
+  "claudeCode.preferredLocation": "panel"
 }

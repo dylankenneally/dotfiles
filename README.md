@@ -26,6 +26,7 @@ cp .bash_profile ~/.bash_profile
 cp .bashrc ~/.bashrc
 cp .gitconfig ~/.gitconfig
 cp .editorconfig ~/.editorconfig
+cp .prettierrc.js ~/.prettierrc.js
 ```
 
 ### Install commonly used packages & settings
@@ -43,27 +44,7 @@ Install the software above, then cherry pick from below
 
 ### Typical brew packages
 
-The following packages are installed via `brew`, to install all of them run `brew bundle` - this will install them from the [Brewfile](./Brewfile).
-
-- bash: Bourne-Again SHell, a UNIX command interpreter
-- bat: Clone of cat(1) with syntax highlighting and Git integration
-- exa: Modern replacement for 'ls'
-- git: Distributed revision control system
-- gnupg: GNU Pretty Good Privacy (PGP) package
-- guile: GNU Ubiquitous Intelligent Language for Extensions
-- htop: Improved top (interactive process viewer)
-- httpie: User-friendly cURL replacement (command-line HTTP client)
-- imagemagick: Tools and libraries to manipulate images in many formats
-- nginx: HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
-- python@3.10: Interpreted, interactive, object-oriented programming language
-- rename: Perl-powered file rename script with many helpful built-ins
-- thefuck: Programmatically correct mistyped console commands
-- tldr: Simplified and community-driven man pages
-- tree: Display directories as trees (with optional color/HTML output)
-- watchman: Watch files and take action when they change
-- wget: Internet file retriever
-
-To generate the above list, run `brew leaves | xargs -n1 brew desc --eval-all`.
+A full list of packages installed via `brew` can be found in the [doco folder](./doco/brewlist.md). To install all of them, run `brew bundle` - this will install them from the [Brewfile](./Brewfile).
 
 #### Working with Brewfile's
 
