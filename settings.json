@@ -61,10 +61,11 @@
     "dylankenneally",
     "epicormic",
     "Kenneally",
+    "Mintlify",
     "SERP",
     "tidbits"
   ],
-  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.ignoreTrimWhitespace": false,
   "editor.accessibilitySupport": "off",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontSize": 16,
@@ -79,10 +80,11 @@
   "git.enableSmartCommit": true,
   "github.copilot.editor.enableAutoCompletions": true,
   "github.copilot.enable": {
-    "*": true,
-    "markdown": true,
+    "*": false,
     "plaintext": true,
-    "scminput": false
+    "markdown": false,
+    "scminput": false,
+    "javascript": false
   },
   "markdown-preview-enhanced.enableExtendedTableSyntax": true,
   "markdown-preview-enhanced.previewTheme": "atom-light.css",
@@ -105,7 +107,9 @@
       "savePassword": true,
       "server": "10.128.104.228",
       "trustServerCertificate": true,
-      "user": "service.vsm"
+      "user": "service.vsm",
+      "groupId": "ROOT",
+      "id": "f5c66a88-5dcc-4637-a1ab-fa425d0492ee"
     }
   ],
   "redhat.telemetry.enabled": true,
@@ -150,5 +154,22 @@
     "*.rtf": "default"
   },
   "chat.viewSessions.orientation": "stacked",
-  "claudeCode.preferredLocation": "panel"
+  "claudeCode.preferredLocation": "panel",
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true,
+    "https://mintlify.com": true
+  },
+  "http.systemCertificatesNode": true,
+  "geminicodeassist.displayInlineContextHint": false,
+  "mssql.connectionGroups": [
+    {
+      "name": "ROOT",
+      "id": "ROOT"
+    }
+  ],
+  "diffEditor.codeLens": true
 }

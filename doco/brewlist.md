@@ -9,7 +9,7 @@ bash: Bourne-Again SHell, a UNIX command interpreter
 bat: Clone of cat(1) with syntax highlighting and Git integration
 boost: Collection of portable C++ source libraries
 brotli: Generic-purpose lossless compression algorithm by Google
-bun: Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
+bun: Incredibly fast JavaScript runtime, bundler, test runner, and package manager
 ca-certificates: Mozilla CA certificate store
 cairo: Vector graphics library with cross-device output support
 certifi: Mozilla CA bundle for Python
@@ -42,13 +42,11 @@ harfbuzz: OpenType text shaping engine
 highway: Performance-portable, length-agnostic SIMD with runtime dispatch
 htop: Improved top (interactive process viewer)
 httpie: User-friendly cURL replacement (command-line HTTP client)
-icu4c@76: C/C++ and Java libraries for Unicode and globalization
 icu4c@78: C/C++ and Java libraries for Unicode and globalization
 idb-companion: A Powerful Command Line for automating iOS Simulators
 imagemagick: Tools and libraries to manipulate images in select formats
 imath: Library of 2D and 3D vector, matrix, and math operations
 ios-deploy: Install and debug iPhone apps from the command-line
-jasper: Library for manipulating JPEG-2000 images
 jbig2dec: JBIG2 decoder and library (for monochrome documents)
 jpeg-turbo: JPEG image codec that aids compression and decompression
 jpeg-xl: New file format for still image compression
@@ -68,9 +66,7 @@ libidn: International domain name library
 libidn2: International domain name library (IDNA2008, Punycode and TR46)
 libksba: X.509 and CMS library
 libnghttp2: HTTP/2 C Library
-libomp: LLVM's OpenMP runtime library
 libpng: Library for manipulating PNG images
-libraw: Library for reading RAW files from digital photo cameras
 libsodium: NaCl networking and cryptography library
 libssh2: C library implementing the SSH2 protocol
 libtasn1: ASN.1 structure parser library
@@ -112,7 +108,6 @@ pkgconf: Package compiler and linker metadata toolkit
 certifi: Mozilla CA bundle for Python
 python@3.11: Interpreted, interactive, object-oriented programming language
 python@3.12: Interpreted, interactive, object-oriented programming language
-python@3.13: Interpreted, interactive, object-oriented programming language
 python@3.14: Interpreted, interactive, object-oriented programming language
 rbenv: Ruby version manager
 readline: Library for command-line editing
@@ -136,6 +131,7 @@ xorgproto: X.Org: Protocol Headers
 xxhash: Extremely fast non-cryptographic hash algorithm
 xz: General-purpose data compression with high compression ratio
 zstd: Zstandard is a real-time compression algorithm
+cleardisk: (ClearDisk) Free, open-source macOS app to find and clean developer caches
 dbeaver-community: (DBeaver Community Edition) Universal database tool and SQL client
 fig: (fig) Reimagine your terminal
 flipper: (Facebook Flipper) Desktop debugging platform for mobile developers
