@@ -29,7 +29,7 @@ export GPG_TTY=$(tty)
 test -f ~/.bashrc && builtin source ~/.bashrc
 
 # ruby environment manager (for React Native iOS builds etc)
-eval "$(rbenv init - bash)"
+# eval "$(rbenv init - bash)"
 
 # Setting PATH for Python 3.11
 # The original version is saved in .bash_profile.pysave

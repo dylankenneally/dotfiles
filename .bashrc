@@ -22,7 +22,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # Google Chrome
-alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+# alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 
 # read the fucking manual (rtfm) has been in my vocabulary my entire career, too long didn't read (tldr) hasn't.
 # also, I find "tldr" rude, odd how I don't find find "rtfm" rude, even though it clearly is...
@@ -72,7 +72,7 @@ function dockermappedshell() {
 export PS1="\[$(tput setaf 5)\]\$(get_shell_count_display)➜ \[$(tput setaf 6)\]\w\[$(tput setaf 3)\]\$(parse_git_branch) \[$(tput sgr0)\]"
 export PS2="\[$(tput setaf 5)\]\$(get_shell_count_display)➜➜ \[$(tput sgr0)\]"
 
-eval "$(thefuck --alias)"
+# eval "$(thefuck --alias)"
 
 [[ -f "$HOME/fig-export/dotfiles/dotfile.bash" ]] && source "$HOME/fig-export/dotfiles/dotfile.bash"
 

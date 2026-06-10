@@ -1,23 +1,23 @@
 [user]
 	name = Dylan Kenneally
 	email = github@dylankenneally.com
-	signingkey = 670DBBA68B413389
+	# signingkey = 670DBBA68B413389
 [help]
 	autocorrect = 0
 [alias]
 	st = status
 	br = branch
 	co = checkout
-	ci = commit -S -a -m
-	ci2 = commit -S -m
+	ci = commit -a -m
+	ci2 = commit -m
 	su = submodule update --init --recursive
 	alias = !git config --list | grep --color=auto ^alias\\.
 	remotes = remote -v
 	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 	lol = log --pretty=oneline --abbrev-commit --graph --decorate
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	cin = commit -S -a -n -m
-	cin2 = commit -S -n -m
+	cin = commit -a -n -m
+	cin2 = commit -n -m
 [commit]
 	gpgsign = true
 [init]

@@ -116,6 +116,23 @@ dockermappedshell your-container
 
 ### Working on Windows OS
 
+#### From 10th June 2026
+
+Based on using `git-bash` on Windows 11. 
+
+```bash
+bash: thefuck: command not found
+bash: rbenv: command not found
+# removed them from bash files in ~/
+```
+
+Installed:
+
+- `bat`, https://github.com/sharkdp/bat#installation, winget install sharkdp.bat
+- `eza` winget install eza-community.eza
+
+#### Pre 10th June 2026
+
 Been a few years since I've developed on Windows, the below was handy then, may be handy in future.
 
 - [7-zip](https://www.7-zip.org/download.html)
