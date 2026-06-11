@@ -128,8 +128,10 @@ bash: rbenv: command not found
 
 Installed:
 
-- `bat`, https://github.com/sharkdp/bat#installation, winget install sharkdp.bat
+- `bat` winget install sharkdp.bat
 - `eza` winget install eza-community.eza
+- [Process explorer](https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer)
+  - Installed to `C:\Utils`
 
 #### Pre 10th June 2026
 
