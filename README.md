@@ -118,7 +118,7 @@ dockermappedshell your-container
 
 #### From 10th June 2026
 
-Based on using `git-bash` on Windows 11. 
+Based on using `git-bash` on Windows 11.
 
 ```bash
 bash: thefuck: command not found
@@ -132,6 +132,8 @@ Installed:
 - `eza` winget install eza-community.eza
 - [Process explorer](https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer)
   - Installed to `C:\Utils`
+- [WinDiff / WinMerge](https://portableapps.com/apps/utilities/winmerge_portable)
+- [tldr](https://tldr.sh/#installation)
 
 #### Pre 10th June 2026
 

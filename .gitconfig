@@ -19,7 +19,7 @@
 	cin = commit -a -n -m
 	cin2 = commit -n -m
 [commit]
-	gpgsign = true
+	gpgsign = false
 [init]
 	defaultBranch = master
 [credential "https://git.internal.civillo.com"]

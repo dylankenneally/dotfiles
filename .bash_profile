@@ -47,6 +47,9 @@ export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin/
 export PATH=$PATH:$ANDROID_HOME/build-tools
 export PATH=$PATH:$ANDROID_HOME/emulator/
 
+# stuff that would be available via brew, but needed to use pip (python) on Windows
+export PATH=$PATH:~/AppData/Local/Python/pythoncore-3.14-64/Scripts/
+
 # Speedshield npm token, do not commit to git
 export NPM_TOKEN=REDACTED
 
