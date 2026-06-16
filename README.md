@@ -134,6 +134,9 @@ Installed:
   - Installed to `C:\Utils`
 - [WinDiff / WinMerge](https://portableapps.com/apps/utilities/winmerge_portable)
 - [tldr](https://tldr.sh/#installation)
+- [Sourcetree](https://www.atlassian.com/software/sourcetree)
+- [HTTPPie](https://httpie.io/docs/cli/pypi), `pip install httpie`
+- [postman](https://www.postman.com/downloads/)
 
 #### Pre 10th June 2026
 
