@@ -1,5 +1,5 @@
 aiofiles==23.2.1
-certifi==2023.7.22
+certifi==2024.7.4
 fb-idb==1.1.7
 grpclib==0.4.7
 h2==4.1.0
