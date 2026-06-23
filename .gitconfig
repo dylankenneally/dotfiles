@@ -24,3 +24,13 @@
 	defaultBranch = master
 [credential "https://git.internal.civillo.com"]
 	provider = generic
+[core]
+	autocrlf = true
+[difftool "sourcetree"]
+	cmd = "'' "
+[mergetool "sourcetree"]
+	cmd = "'' "
+	trustExitCode = false
+	keepBackup = false
+[credential]
+	helper = manager
