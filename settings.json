@@ -171,5 +171,8 @@
       "id": "ROOT"
     }
   ],
-  "diffEditor.codeLens": true
+  "diffEditor.codeLens": true,
+  "[xml]": {
+    "editor.defaultFormatter": "DotJoshJohnson.xml"
+  }
 }

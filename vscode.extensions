@@ -12,7 +12,6 @@ eseom.nunjucks-template
 expo.vscode-expo-tools
 figma.figma-vscode-extension
 genuitecllc.codetogether
-github.copilot-chat
 github.vscode-github-actions
 golang.go
 google.geminicodeassist
@@ -25,6 +24,7 @@ mariomatheu.syntax-project-pbxproj
 mathiasfrohlich.kotlin
 mechatroner.rainbow-csv
 meronz.manpages
+midudev.better-svg
 mongodb.mongodb-vscode
 ms-azuretools.vscode-containers
 ms-azuretools.vscode-docker

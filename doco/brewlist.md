@@ -43,7 +43,6 @@ highway: Performance-portable, length-agnostic SIMD with runtime dispatch
 htop: Improved top (interactive process viewer)
 httpie: User-friendly cURL replacement (command-line HTTP client)
 icu4c@78: C/C++ and Java libraries for Unicode and globalization
-idb-companion: A Powerful Command Line for automating iOS Simulators
 imagemagick: Tools and libraries to manipulate images in select formats
 imath: Library of 2D and 3D vector, matrix, and math operations
 ios-deploy: Install and debug iPhone apps from the command-line
@@ -131,7 +130,6 @@ xorgproto: X.Org: Protocol Headers
 xxhash: Extremely fast non-cryptographic hash algorithm
 xz: General-purpose data compression with high compression ratio
 zstd: Zstandard is a real-time compression algorithm
-cleardisk: (ClearDisk) Free, open-source macOS app to find and clean developer caches
 dbeaver-community: (DBeaver Community Edition) Universal database tool and SQL client
 fig: (fig) Reimagine your terminal
 flipper: (Facebook Flipper) Desktop debugging platform for mobile developers

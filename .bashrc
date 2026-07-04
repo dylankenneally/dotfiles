@@ -69,12 +69,17 @@ function dockermappedshell() {
 
 # use my preferred prompt, includes the nested shell count & the current git branch
 # bash PS1 generator/helper at: https://kirsle.net/wizards/ps1.html
-export PS1="\[$(tput setaf 5)\]\$(get_shell_count_display)➜ \[$(tput setaf 6)\]\w\[$(tput setaf 3)\]\$(parse_git_branch) \[$(tput sgr0)\]"
-export PS2="\[$(tput setaf 5)\]\$(get_shell_count_display)➜➜ \[$(tput sgr0)\]"
+# NB: guarded on `[[ -t 1 ]]` (stdout is a terminal) so the prompt isn't rendered
+#     into captured/piped output by tools that run bash interactively.
+if [[ -t 1 ]]; then
+    export PS1="\[$(tput setaf 5)\]\$(get_shell_count_display)➜ \[$(tput setaf 6)\]\w\[$(tput setaf 3)\]\$(parse_git_branch) \[$(tput sgr0)\]"
+    export PS2="\[$(tput setaf 5)\]\$(get_shell_count_display)➜➜ \[$(tput sgr0)\]"
+fi
 
-eval "$(thefuck --alias)"
-
-[[ -f "$HOME/fig-export/dotfiles/dotfile.bash" ]] && source "$HOME/fig-export/dotfiles/dotfile.bash"
+# thefuck spawns python on every shell start; only useful in an interactive terminal
+[[ -t 1 ]] && eval "$(thefuck --alias)"
 
 # Kiro CLI post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/kiro-cli/shell/bashrc.post.bash" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/bashrc.post.bash"
+
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path bash)"

@@ -23,7 +23,9 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # Git commit signing - https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key
-export GPG_TTY=$(tty)
+# NB: guarded on `[[ -t 0 ]]` so `tty` doesn't emit "not a tty" (and exit 1) when
+#     stdin isn't a terminal, e.g. under tools that pipe commands into bash.
+[[ -t 0 ]] && export GPG_TTY="$(tty)"
 
 # setup the interactive shell
 test -f ~/.bashrc && builtin source ~/.bashrc
