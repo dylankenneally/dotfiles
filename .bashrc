@@ -69,8 +69,13 @@ function dockermappedshell() {
 
 # use my preferred prompt, includes the nested shell count & the current git branch
 # bash PS1 generator/helper at: https://kirsle.net/wizards/ps1.html
-export PS1="\[$(tput setaf 5)\]\$(get_shell_count_display)➜ \[$(tput setaf 6)\]\w\[$(tput setaf 3)\]\$(parse_git_branch) \[$(tput sgr0)\]"
-export PS2="\[$(tput setaf 5)\]\$(get_shell_count_display)➜➜ \[$(tput sgr0)\]"
+# only applied for interactive shells, so non-interactive/scripted invocations
+# (e.g. tool-driven automation) get bash's plain default prompt instead of
+# these ANSI escapes leaking into captured output
+if [[ $- == *i* ]]; then
+  export PS1="\[$(tput setaf 5)\]\$(get_shell_count_display)➜ \[$(tput setaf 6)\]\w\[$(tput setaf 3)\]\$(parse_git_branch) \[$(tput sgr0)\]"
+  export PS2="\[$(tput setaf 5)\]\$(get_shell_count_display)➜➜ \[$(tput sgr0)\]"
+fi
 
 # eval "$(thefuck --alias)"
 

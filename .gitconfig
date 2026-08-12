@@ -18,6 +18,7 @@
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	cin = commit -a -n -m
 	cin2 = commit -n -m
+	cred = config --global credential.helper
 [commit]
 	gpgsign = false
 [init]
