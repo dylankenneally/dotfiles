@@ -1,5 +1,5 @@
 tap "bysiber/cleardisk", trusted: true
-tap "facebook/fb"
+tap "facebook/fb", trusted: true
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "oven-sh/bun"
@@ -83,6 +83,8 @@ brew "tree"
 brew "watchman"
 # Internet file retriever
 brew "wget"
+# Companion server for automating iOS Simulators
+brew "facebook/fb/idb-companion"
 # Free, open-source macOS app to find and clean developer caches
 cask "bysiber/cleardisk/cleardisk"
 # Universal database tool and SQL client
