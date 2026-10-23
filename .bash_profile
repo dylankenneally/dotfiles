@@ -22,9 +22,6 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # silence apple message about switching to zsh (z shell), I'm happy with bash, which I keep up to date, https://itnext.io/upgrading-bash-on-macos-7138bd1066ba
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
-# Git commit signing - https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key
-export GPG_TTY=$(tty)
-
 # setup the interactive shell
 test -f ~/.bashrc && builtin source ~/.bashrc
 

@@ -2,7 +2,6 @@
 	name = Dylan Kenneally
 	# no default email: the includeIf rules at the bottom pick one by folder, and anywhere else git refuses to commit rather than guess
 	useConfigOnly = true
-	# signingkey = 670DBBA68B413389
 [help]
 	autocorrect = 0
 [alias]
@@ -21,8 +20,11 @@
 	cin2 = commit -n -m
 	cred = config --global credential.helper
 	prune-local = "!git fetch --prune && git branch -vv | awk '/: gone]/ && $1 != \"*\" {print $1}' | while read -r b; do git branch -d \"$b\"; done"
+# commits and tags aren't signed; set explicitly so a stale signing setting elsewhere can't turn it back on
 [commit]
 	gpgsign = false
+[tag]
+	gpgSign = false
 [init]
 	defaultBranch = master
 [credential "https://git.internal.civillo.com"]
