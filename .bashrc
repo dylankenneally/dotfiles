@@ -22,7 +22,10 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # Google Chrome
-# alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+case "$(uname -s)" in
+    Darwin) alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome' ;;
+    MINGW* | MSYS* | CYGWIN*) alias chrome='"/c/Program Files/Google/Chrome/Application/chrome.exe"' ;;
+esac
 
 # read the fucking manual (rtfm) has been in my vocabulary my entire career, too long didn't read (tldr) hasn't.
 # also, I find "tldr" rude, odd how I don't find find "rtfm" rude, even though it clearly is...

@@ -1,0 +1,2 @@
+# LF everywhere, so scripts and dotfiles checked out on Windows still run when copied to (or shared with) macOS
+* text=auto eol=lf

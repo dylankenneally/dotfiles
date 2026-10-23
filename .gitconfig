@@ -19,6 +19,7 @@
 	cin = commit -a -n -m
 	cin2 = commit -n -m
 	cred = config --global credential.helper
+	prune-local = "!git prune-local  fetch --prune && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -d"
 [commit]
 	gpgsign = false
 [init]
@@ -35,3 +36,19 @@
 	keepBackup = false
 [credential]
 	helper = manager
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+# pick the identity by where the repo lives, the later (more specific) match wins; a rule for the other OS never matches, so both sets are safe everywhere
+# macOS: ~/git is personal, ~/git/civillo is work
+[includeIf "gitdir:~/git/"]
+    path = ~/.gitconfig-personal
+[includeIf "gitdir:~/git/civillo/"]
+    path = ~/.gitconfig-work
+# Windows: git matches the path as C:/..., not git-bash's /c/...; C:/git is work, C:/git/dylankenneally is personal
+[includeIf "gitdir/i:C:/git/"]
+    path = ~/.gitconfig-work
+[includeIf "gitdir/i:C:/git/dylankenneally/"]
+    path = ~/.gitconfig-personal

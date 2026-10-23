@@ -1,0 +1,99 @@
+{
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.renderWhitespace": "all",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell",
+    },
+    "Command Prompt": {
+      "path": ["${env:windir}\\Sysnative\\cmd.exe", "${env:windir}\\System32\\cmd.exe"],
+      "args": [],
+      "icon": "terminal-cmd",
+    },
+    "Git Bash": {
+      "path": "C:\\Program Files\\Git\\bin\\bash.exe",
+      "args": ["--login", "-i"],
+    },
+  },
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "markdown.extension.orderedList.marker": "one",
+  "todohighlight.defaultStyle": {},
+  "todohighlight.isCaseSensitive": false,
+  "todohighlight.keywords": [
+    {
+      "backgroundColor": "red",
+      "color": "white",
+      "text": "BUG:",
+    },
+    {
+      "backgroundColor": "green",
+      "color": "white",
+      "text": "DYLAN:",
+    },
+    {
+      "backgroundColor": "green",
+      "color": "white",
+      "text": "TODO:",
+    },
+    {
+      "backgroundColor": "yellow",
+      "color": "black",
+      "text": "WARN:",
+    },
+    {
+      "backgroundColor": "red",
+      "color": "white",
+      "text": "FIXME:",
+    },
+  ],
+  "cSpell.language": "en-GB",
+  "workbench.browser.openLocalhostLinks": false,
+  "editor.rulers": [],
+  "[markdown]": {
+    "diffEditor.ignoreTrimWhitespace": false,
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.editor.useModal": "some",
+  "cSpell.userWords": ["axios", "Civillo", "Gitea", "Kenneally", "magick"],
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features",
+  },
+  "chat.viewSessions.orientation": "stacked",
+  "chat.tools.urls.autoApprove": {
+    "https://code.visualstudio.com": true,
+    "https://github.com/microsoft/vscode/wiki/*": true,
+    "https://v2.vuejs.org/v2/guide/components-props.html#Prop-Casing-camelCase-vs-kebab-case": true,
+    "https://v2.vuejs.org/v2/guide": true,
+    "https://v2.vuejs.org/v2": true,
+    "https://v2.vuejs.org": true,
+    "https://*.vuejs.org": true,
+    "https://vuejs.org/guide/components/props.html#prop-name-casing": true,
+    "https://vuejs.org/guide/components": true,
+    "https://vuejs.org/guide": true,
+    "https://vuejs.org": true,
+    "https://v2.vuetifyjs.com/en/api/v-avatar": true,
+    "https://v2.vuetifyjs.com/en/api": true,
+    "https://v2.vuetifyjs.com/en": true,
+    "https://v2.vuetifyjs.com": true,
+    "https://*.vuetifyjs.com": true,
+    "https://vuetifyjs.com/en/api/v-avatar": true,
+    "https://vuetifyjs.com/en/api": true,
+    "https://vuetifyjs.com/en": true,
+    "https://vuetifyjs.com": true,
+  },
+  "cSpell.enabledFileTypes": {
+    "md": true,
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "chat.tools.terminal.autoApprove": {
+    "npx @11ty/elevent": true
+  },
+  "diffEditor.renderSideBySide": true,
+  "diffEditor.useInlineViewWhenSpaceIsLimited": false,
+}
