@@ -29,12 +29,6 @@
 	defaultBranch = master
 [credential "https://git.internal.civillo.com"]
 	provider = generic
-[difftool "sourcetree"]
-	cmd = "'' "
-[mergetool "sourcetree"]
-	cmd = "'' "
-	trustExitCode = false
-	keepBackup = false
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process

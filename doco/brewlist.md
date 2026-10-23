@@ -137,4 +137,4 @@ vlc: (VLC media player) Multimedia player
 zulu@11: (Azul Zulu Java Standard Edition Development Kit) OpenJDK distribution from Azul
 zulu@17: (Azul Zulu Java Standard Edition Development Kit) OpenJDK distribution from Azul
 
-To generate the above list, run `brew list | xargs -n1 brew desc --eval-all`.
+To generate the above list, run `brew list | xargs brew desc --eval-all`.

@@ -59,7 +59,7 @@ brew_dump() {
 
 brewlist_md() {
     local descs
-    descs=$(brew list | xargs -n1 brew desc --eval-all) || return 1
+    descs=$(brew list | xargs brew desc --eval-all) || return 1
 
     echo '# Brew packages installed'
     echo
@@ -67,7 +67,7 @@ brewlist_md() {
     echo
     echo "$descs"
     echo
-    echo 'To generate the above list, run `brew list | xargs -n1 brew desc --eval-all`.'
+    echo 'To generate the above list, run `brew list | xargs brew desc --eval-all`.'
 }
 
 # winget can only export to a file, and stamps it with the time; drop that so an unchanged machine gives an unchanged file

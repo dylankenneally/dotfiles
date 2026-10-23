@@ -61,13 +61,14 @@ parse_git_branch() {
 # Example of bash not being present
 #   dockermappedshell hello-world # docker example container - has no `bash`, hence fails
 
+# MSYS_NO_PATHCONV stops git-bash rewriting the container paths (e.g. /bin/bash -> C:/Program Files/Git/usr/bin/bash); ignored elsewhere
 function dockershell() {
-    docker run --rm -i -t --entrypoint=/bin/bash "$@"
+    MSYS_NO_PATHCONV=1 docker run --rm -i -t --entrypoint=/bin/bash "$@"
 }
 
 function dockermappedshell() {
-    dirname=${PWD##*/}
-    docker run --rm -it --entrypoint=/bin/bash -v `pwd`:/${dirname} -w /${dirname} "$@"
+    local dir=${PWD##*/}
+    MSYS_NO_PATHCONV=1 docker run --rm -it --entrypoint=/bin/bash -v "$PWD:/$dir" -w "/$dir" "$@"
 }
 
 # use my preferred prompt, includes the nested shell count & the current git branch
@@ -86,4 +87,7 @@ fi
 # Kiro CLI post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/kiro-cli/shell/bashrc.post.bash" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/bashrc.post.bash"
 
-[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path bash)"
+# Kiro IDE terminal integration, only when the `kiro` command is on the PATH to locate it
+if [[ $TERM_PROGRAM == kiro ]] && command -v kiro >/dev/null 2>&1; then
+    . "$(kiro --locate-shell-integration-path bash)"
+fi
