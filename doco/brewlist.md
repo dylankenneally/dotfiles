@@ -9,7 +9,6 @@ bash: Bourne-Again SHell, a UNIX command interpreter
 bat: Clone of cat(1) with syntax highlighting and Git integration
 boost: Collection of portable C++ source libraries
 brotli: Generic-purpose lossless compression algorithm by Google
-bun: Incredibly fast JavaScript runtime, bundler, test runner, and package manager
 ca-certificates: Mozilla CA certificate store
 cairo: Vector graphics library with cross-device output support
 certifi: Mozilla CA bundle for Python
@@ -35,9 +34,11 @@ glog: Application-level logging library
 gmp: GNU multiple precision arithmetic library
 gnupg: GNU Privacy Guard (OpenPGP)
 gnutls: GNU Transport Layer Security (TLS) Library
+go: Open source programming language to build simple/reliable/efficient software
 gradle: Open-source build automation tool based on the Groovy and Kotlin DSL
 gradle-completion: Bash and Zsh completion for Gradle
 graphite2: Smart font renderer for non-Roman scripts
+grpcurl: Like cURL, but for gRPC
 harfbuzz: OpenType text shaping engine
 highway: Performance-portable, length-agnostic SIMD with runtime dispatch
 htop: Improved top (interactive process viewer)
@@ -104,7 +105,6 @@ pinentry: Passphrase entry dialog utilizing the Assuan protocol
 pixman: Low-level library for pixel manipulation
 pkgconf: Package compiler and linker metadata toolkit
 pkgconf: Package compiler and linker metadata toolkit
-certifi: Mozilla CA bundle for Python
 python@3.11: Interpreted, interactive, object-oriented programming language
 python@3.12: Interpreted, interactive, object-oriented programming language
 python@3.14: Interpreted, interactive, object-oriented programming language
@@ -130,11 +130,14 @@ xorgproto: X.Org: Protocol Headers
 xxhash: Extremely fast non-cryptographic hash algorithm
 xz: General-purpose data compression with high compression ratio
 zstd: Zstandard is a real-time compression algorithm
+idb-companion: Companion server for automating iOS Simulators
+bun: Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
 dbeaver-community: (DBeaver Community Edition) Universal database tool and SQL client
-fig: (fig) Reimagine your terminal
+dotnet-sdk: (.NET SDK) Developer platform
 flipper: (Facebook Flipper) Desktop debugging platform for mobile developers
 vlc: (VLC media player) Multimedia player
 zulu@11: (Azul Zulu Java Standard Edition Development Kit) OpenJDK distribution from Azul
 zulu@17: (Azul Zulu Java Standard Edition Development Kit) OpenJDK distribution from Azul
+cleardisk: (ClearDisk) Free, open-source macOS app to find and clean developer caches
 
-To generate the above list, run `brew list | xargs brew desc --eval-all`.
+To generate the above list, run `brew list --formula --full-name | xargs brew desc --formula` and `brew list --cask --full-name | xargs brew desc --cask`.

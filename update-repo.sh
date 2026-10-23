@@ -59,7 +59,8 @@ brew_dump() {
 
 brewlist_md() {
     local descs
-    descs=$(brew list | xargs brew desc --eval-all) || return 1
+    # `--full-name` skips stale rename symlinks in the Caskroom (e.g. zulu17 -> zulu@17), which plain `brew list` reports but `brew desc` can't resolve; one `brew desc` per list, not per package, as each start is slow
+    descs=$(brew list --formula --full-name | xargs brew desc --formula && brew list --cask --full-name | xargs brew desc --cask) || return 1
 
     echo '# Brew packages installed'
     echo
@@ -67,7 +68,7 @@ brewlist_md() {
     echo
     echo "$descs"
     echo
-    echo 'To generate the above list, run `brew list | xargs brew desc --eval-all`.'
+    echo 'To generate the above list, run `brew list --formula --full-name | xargs brew desc --formula` and `brew list --cask --full-name | xargs brew desc --cask`.'
 }
 
 # winget can only export to a file, and stamps it with the time; drop that so an unchanged machine gives an unchanged file
