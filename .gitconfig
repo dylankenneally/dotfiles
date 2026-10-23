@@ -1,24 +1,53 @@
 [user]
 	name = Dylan Kenneally
-	email = github@dylankenneally.com
-	signingkey = 670DBBA68B413389
+	# no default email: the includeIf rules at the bottom pick one by folder, and anywhere else git refuses to commit rather than guess
+	useConfigOnly = true
 [help]
 	autocorrect = 0
 [alias]
 	st = status
 	br = branch
 	co = checkout
-	ci = commit -S -a -m
-	ci2 = commit -S -m
+	ci = commit -a -m
+	ci2 = commit -m
 	su = submodule update --init --recursive
 	alias = !git config --list | grep --color=auto ^alias\\.
 	remotes = remote -v
 	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 	lol = log --pretty=oneline --abbrev-commit --graph --decorate
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	cin = commit -S -a -n -m
-	cin2 = commit -S -n -m
+	cin = commit -a -n -m
+	cin2 = commit -n -m
+	cred = config --global credential.helper
+	prune-local = "!git fetch --prune && git branch -vv | awk '/: gone]/ && $1 != \"*\" {print $1}' | while read -r b; do git branch -d \"$b\"; done"
+# commits and tags aren't signed; set explicitly so a stale signing setting elsewhere can't turn it back on
 [commit]
-	gpgsign = true
+	gpgsign = false
+[tag]
+	gpgSign = false
 [init]
 	defaultBranch = master
+[credential "https://git.internal.civillo.com"]
+	provider = generic
+[difftool "sourcetree"]
+	cmd = "'' "
+[mergetool "sourcetree"]
+	cmd = "'' "
+	trustExitCode = false
+	keepBackup = false
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+# pick the identity by where the repo lives, the later (more specific) match wins; a rule for the other OS never matches, so both sets are safe everywhere
+# macOS: ~/git is personal, ~/git/civillo is work
+[includeIf "gitdir:~/git/"]
+    path = ~/.gitconfig-personal
+[includeIf "gitdir:~/git/civillo/"]
+    path = ~/.gitconfig-work
+# Windows: git matches the path as C:/..., not git-bash's /c/...; C:/git is work, C:/git/dylankenneally is personal
+[includeIf "gitdir/i:C:/git/"]
+    path = ~/.gitconfig-work
+[includeIf "gitdir/i:C:/git/dylankenneally/"]
+    path = ~/.gitconfig-personal

@@ -16,33 +16,30 @@ Quick setup details: software to install, config/dotfiles & packages
 - [Chrome](https://www.google.com/intl/en_au/chrome/)
 - [Docker](https://www.docker.com/)
 
-### dotfiles to copy over
+### Install the repo onto a machine
 
-**NB:** this _replaces_ the systems current dotfiles.
-
-```bash
-# copy dotfiles from the repo
-cp .bash_profile ~/.bash_profile
-cp .bashrc ~/.bashrc
-cp .gitconfig ~/.gitconfig
-cp .editorconfig ~/.editorconfig
-cp .prettierrc.js ~/.prettierrc.js
-```
-
-### Install commonly used packages & settings
+Works on macOS and on Windows (from `git-bash`).
 
 ```bash
-brew bundle
-pip3 install -r requirements.txt
-source ./install_vscode_extensions.sh
-cp settings.json ~/Library/Application\ Support/Code/User/settings.json
+git clone https://github.com/dylankenneally/dotfiles.git
+cd dotfiles
+./install.sh                     # everything
+./install.sh dotfiles settings   # or just some sections: dotfiles, settings, packages
 ```
+
+- **dotfiles** copies the dotfiles to your home directory. These are shared by every OS.
+- **settings** copies this OS's editor settings into place.
+- **packages** installs this OS's system, editor and python packages.
+
+Files that are shared by every OS sit in the repo as-is; files that are specific to an OS are named for it (e.g. `*.macos.*`, `*.windows.*`). The list of what goes where lives in [lib/common.sh](./lib/common.sh).
+
+Any file that would be replaced, and differs, is backed up to `~/.dotfiles-backup/<timestamp>/` first. Missing tools are skipped and listed at the end, so install them and re-run that section. Secrets are stored as `REDACTED` in the repo, and the install lists any you need to set again.
 
 ## Detailed setup
 
 Install the software above, then cherry pick from below
 
-### Typical brew packages
+### Typical brew packages (macOS)
 
 A full list of packages installed via `brew` can be found in the [doco folder](./doco/brewlist.md). To install all of them, run `brew bundle` - this will install them from the [Brewfile](./Brewfile).
 
@@ -50,40 +47,27 @@ A full list of packages installed via `brew` can be found in the [doco folder](.
 
 ```bash
 # creates Brewfile in the current directory from currently-installed packages
-rm Brewfile # brew won't override the file by default
-brew bundle dump
+brew bundle dump --force
 
 # install everything from the Brewfile
 brew bundle
 ```
 
+### Typical winget packages (Windows)
+
+Packages installed via `winget` are listed in [winget.json](./winget.json). To install all of them, run `winget import -i winget.json`.
+
 ### Typical python packages
 
-Typical python packages are listed in [requirements.txt](./requirements.txt).
-
-```bash
-pip3 install -r requirements.txt
-```
-
-#### Working with `requirements.txt`
-
-```bash
-# create a requirements file in the current directory from currently-installed packages
-pip3 freeze > requirements.txt
-
-# install everything from the requirements file
-pip3 install -r requirements.txt
-```
+Typical python packages are listed per OS, in `requirements.<os>.txt`, and are installed by `./install.sh packages`.
 
 ### Typical Visual Studio Code extensions
 
-Typical python packages are listed in [vscode.extensions](./vscode.extensions), and can be installed by running [`source ./install_vscode_extensions.sh`](./install_vscode_extensions.sh).
-
-To update the extensions list: `code --list-extensions > vscode.extensions`.
+Typical extensions are listed per OS, in `vscode.<os>.extensions`, and are installed by `./install.sh packages`.
 
 ### Typical Visual Studio Code settings
 
-Place the [settings file](./settings.json) in the following locations:
+Settings are kept per OS, in `settings.<os>.json`. `./install.sh settings` places this OS's file in the following locations:
 
 - macOS `$HOME/Library/Application\ Support/Code/User/settings.json`
 - Linux `$HOME/.config/Code/User/settings.json`
@@ -116,6 +100,30 @@ dockermappedshell your-container
 
 ### Working on Windows OS
 
+#### From 10th June 2026
+
+Based on using `git-bash` on Windows 11.
+
+```bash
+bash: thefuck: command not found
+bash: rbenv: command not found
+# removed them from bash files in ~/
+```
+
+Installed:
+
+- `bat` winget install sharkdp.bat
+- `eza` winget install eza-community.eza
+- [Process explorer](https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer)
+  - Installed to `C:\Utils`
+- [WinDiff / WinMerge](https://portableapps.com/apps/utilities/winmerge_portable)
+- [tldr](https://tldr.sh/#installation)
+- [Sourcetree](https://www.atlassian.com/software/sourcetree)
+- [HTTPPie](https://httpie.io/docs/cli/pypi), `pip install httpie`
+- [postman](https://www.postman.com/downloads/)
+
+#### Pre 10th June 2026
+
 Been a few years since I've developed on Windows, the below was handy then, may be handy in future.
 
 - [7-zip](https://www.7-zip.org/download.html)
@@ -128,27 +136,14 @@ Been a few years since I've developed on Windows, the below was handy then, may 
 
 ## Updating this repo
 
-When new items are installed/removed from your dev env, or just periodically, run the following to update this repo with a snapshot of the current system
+When new items are installed/removed from your dev env, or just periodically, run the following (on macOS or Windows) to update this repo with a snapshot of the current system, then review it with `git diff` before committing.
 
 ```bash
-source ./update-repo.sh
+./update-repo.sh                    # everything
+./update-repo.sh dotfiles packages  # or just some sections: dotfiles, aliases, settings, packages
 ```
 
-### Updating only parts
-
-Take your pick from the following:
-
-```bash
-# copy dotfiles to the repo
-cp ~/.bash_profile .
-cp ~/.bashrc .
-cp ~/.gitconfig .
-
-# update package files
-brew bundle dump
-pip3 freeze > requirements.txt
-code --list-extensions > vscode.extensions
-
-# copy settings files
-cp ~/Library/Application\ Support/Code/User/settings.json .
-```
+- The dotfiles are shared by every OS, so keep OS-specific lines in them safe to run elsewhere (e.g. guarded by `[[ -f ... ]]`).
+- Editor settings, the alias snapshot and package lists are per OS, so a run on one machine never touches another's.
+- A file is only replaced when its command succeeds with output, so a missing or failing tool can't empty it.
+- Secrets exported from the dotfiles (tokens, passwords, keys) are written to the repo as `REDACTED`.

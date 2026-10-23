@@ -22,7 +22,10 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # Google Chrome
-alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+case "$(uname -s)" in
+    Darwin) alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome' ;;
+    MINGW* | MSYS* | CYGWIN*) alias chrome='"/c/Program Files/Google/Chrome/Application/chrome.exe"' ;;
+esac
 
 # read the fucking manual (rtfm) has been in my vocabulary my entire career, too long didn't read (tldr) hasn't.
 # also, I find "tldr" rude, odd how I don't find find "rtfm" rude, even though it clearly is...
@@ -69,15 +72,16 @@ function dockermappedshell() {
 
 # use my preferred prompt, includes the nested shell count & the current git branch
 # bash PS1 generator/helper at: https://kirsle.net/wizards/ps1.html
-# NB: guarded on `[[ -t 1 ]]` (stdout is a terminal) so the prompt isn't rendered
-#     into captured/piped output by tools that run bash interactively.
-if [[ -t 1 ]]; then
+# NB: only for an interactive shell whose stdout is a terminal, so scripted or tool-driven shells (including `bash -i` with captured output) don't get these ANSI escapes in their output
+if [[ $- == *i* && -t 1 ]]; then
     export PS1="\[$(tput setaf 5)\]\$(get_shell_count_display)➜ \[$(tput setaf 6)\]\w\[$(tput setaf 3)\]\$(parse_git_branch) \[$(tput sgr0)\]"
     export PS2="\[$(tput setaf 5)\]\$(get_shell_count_display)➜➜ \[$(tput sgr0)\]"
 fi
 
-# thefuck spawns python on every shell start; only useful in an interactive terminal
-[[ -t 1 ]] && eval "$(thefuck --alias)"
+# thefuck spawns python on every shell start, so only in a terminal, and only where it's installed (it isn't on Windows)
+if [[ -t 1 ]] && command -v thefuck >/dev/null 2>&1; then
+    eval "$(thefuck --alias)"
+fi
 
 # Fig is discontinued (became Amazon Q); remnants only add prompt-hook + escape-code noise
 # [[ -f "$HOME/fig-export/dotfiles/dotfile.bash" ]] && source "$HOME/fig-export/dotfiles/dotfile.bash"

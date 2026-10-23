@@ -22,16 +22,11 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # silence apple message about switching to zsh (z shell), I'm happy with bash, which I keep up to date, https://itnext.io/upgrading-bash-on-macos-7138bd1066ba
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
-# Git commit signing - https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key
-# NB: guarded on `[[ -t 0 ]]` so `tty` doesn't emit "not a tty" (and exit 1) when
-#     stdin isn't a terminal, e.g. under tools that pipe commands into bash.
-[[ -t 0 ]] && export GPG_TTY="$(tty)"
-
 # setup the interactive shell
 test -f ~/.bashrc && builtin source ~/.bashrc
 
 # ruby environment manager (for React Native iOS builds etc)
-eval "$(rbenv init - bash)"
+# eval "$(rbenv init - bash)"
 
 # Setting PATH for Python 3.11
 # The original version is saved in .bash_profile.pysave
@@ -48,6 +43,9 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools/
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin/
 export PATH=$PATH:$ANDROID_HOME/build-tools
 export PATH=$PATH:$ANDROID_HOME/emulator/
+
+# stuff that would be available via brew, but needed to use pip (python) on Windows
+export PATH=$PATH:~/AppData/Local/Python/pythoncore-3.14-64/Scripts/
 
 # Speedshield npm token, do not commit to git
 export NPM_TOKEN=REDACTED
