@@ -9,11 +9,11 @@ alias ...='cd ../..'
 # NB: don't use -G for colour output, as -G means grid in exa (below)
 alias ll='ls -alF --color=always'
 
-# use eza instead of ls, https://eza.rocks/
-alias ls=eza
+# use eza instead of ls, https://eza.rocks/ (if installed)
+command -v eza >/dev/null 2>&1 && alias ls=eza
 
-# use bat instead of cat, https://github.com/sharkdp/bat
-alias cat=bat
+# use bat instead of cat, https://github.com/sharkdp/bat (if installed)
+command -v bat >/dev/null 2>&1 && alias cat=bat
 
 # Always enable coloured `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.

@@ -38,11 +38,11 @@ generate() {
     log "updated $dest"
 }
 
-# secrets belong in ~/.secrets (never copied), so refuse a file that looks like it holds one: a shell `X_TOKEN=...` / `X_PAT=...` or a JSON `"apiKey": "..."`
+# secrets belong in ~/.secrets (never copied), so refuse a file that looks like it holds one: a shell `X_TOKEN=...` / `X_PAT=...`, a gitconfig `token = ...`, a JSON `"apiKey": "..."` or an `Authorization: Bearer ...` header
 refuse_secrets() {
     local lines
     # line numbers only, so the secret itself isn't echoed to the terminal
-    lines=$(grep -inE -e '^[[:space:]]*(export[[:space:]]+)?[a-z0-9_]*((token|secret|password|key)[a-z0-9_]*|_pat)=' -e '"[^"]*(token|secret|password|apikey|api_key)"[[:space:]]*:[[:space:]]*"[^"]+"' "$1" | cut -d: -f1 | paste -sd, - || true)
+    lines=$(grep -inE -e '^[[:space:]]*(export[[:space:]]+)?[a-z0-9_]*((token|secret|password|key)[a-z0-9_]*|_pat)[[:space:]]*=' -e '"[^"]*(token|secret|password|apikey|api_key)"[[:space:]]*:[[:space:]]*"[^"]+"' -e 'authorization:[[:space:]]*(bearer|basic)' "$1" | cut -d: -f1 | paste -sd, - || true)
     if [[ -n $lines ]]; then
         die "$1 looks like it holds a secret on line(s) $lines, move it to ~/.secrets and re-run"
     fi
@@ -52,7 +52,8 @@ refuse_secrets() {
 brew_dump() {
     local tmp rc=0
     tmp=$(mktemp)
-    brew bundle dump --force --file="$tmp" >/dev/null && cat "$tmp" || rc=$?
+    # --no-vscode: extensions are tracked once, in vscode.<os>.extensions, on every OS
+    brew bundle dump --no-vscode --force --file="$tmp" >/dev/null && cat "$tmp" || rc=$?
     rm -f "$tmp"
     return $rc
 }
