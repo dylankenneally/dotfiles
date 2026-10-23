@@ -1,4 +1,4 @@
-tap "bysiber/cleardisk"
+tap "bysiber/cleardisk", trusted: true
 tap "facebook/fb"
 tap "homebrew/bundle"
 tap "homebrew/services"
@@ -47,8 +47,12 @@ brew "unbound"
 brew "gnutls"
 # GNU Privacy Guard (OpenPGP)
 brew "gnupg"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
 # Open-source build automation tool based on the Groovy and Kotlin DSL
 brew "gradle"
+# Like cURL, but for gRPC
+brew "grpcurl"
 # Improved top (interactive process viewer)
 brew "htop"
 # User-friendly cURL replacement (command-line HTTP client)
@@ -83,7 +87,8 @@ brew "wget"
 cask "bysiber/cleardisk/cleardisk"
 # Universal database tool and SQL client
 cask "dbeaver-community"
-# Reimagine your terminal
+# Developer platform
+cask "dotnet-sdk"
 cask "fig"
 # Desktop debugging platform for mobile developers
 cask "flipper"
@@ -101,6 +106,7 @@ vscode "davidanson.vscode-markdownlint"
 vscode "dbaeumer.vscode-eslint"
 vscode "dotjoshjohnson.xml"
 vscode "douglaszaltron.nunjucks-vscode-extensionpack"
+vscode "drblury.protobuf-vsc"
 vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
 vscode "eseom.nunjucks-template"
@@ -159,6 +165,7 @@ vscode "vscjava.vscode-maven"
 vscode "wayou.vscode-todo-highlight"
 vscode "yoavbls.pretty-ts-errors"
 vscode "yzhang.markdown-all-in-one"
+go "golang.org/x/tools/gopls"
 npm "cordova"
 npm "corepack"
 npm "mint"

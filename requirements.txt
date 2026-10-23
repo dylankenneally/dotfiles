@@ -6,8 +6,9 @@ h2==4.1.0
 hpack==4.0.0
 hyperframe==6.0.1
 multidict==6.0.5
-protobuf==4.25.8
+protobuf==4.25.2
 Pygments==2.16.1
+pymupdf==1.28.0
 python-dotenv==1.0.0
 six==1.16.0
 treelib==1.7.0
