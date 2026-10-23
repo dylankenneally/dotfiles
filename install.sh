@@ -32,24 +32,14 @@ install_file() {
     log "installed $dest"
 }
 
-# the repo copy has secrets blanked out by update-repo.sh, so point out which ones need setting again
-warn_redacted() {
-    local f lines
-    for f in "$@"; do
-        lines=$(grep -n 'REDACTED' "$f" || true)
-        if [[ -n $lines ]]; then
-            log "$f has redacted values, set them in $HOME/$(basename "$f"):"
-            echo "$lines" | sed 's/^/  /'
-        fi
-    done
-}
-
 install_dotfiles() {
     local f
     for f in "${DOTFILES[@]}"; do
         install_file "$f" "$HOME/$f"
     done
-    warn_redacted "${DOTFILES[@]}"
+    if [[ ! -f $HOME/.secrets ]]; then
+        log "no ~/.secrets yet, put secrets (e.g. \`export NPM_TOKEN=...\`) there, .bash_profile sources it"
+    fi
 }
 
 install_settings() {

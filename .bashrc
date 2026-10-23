@@ -83,9 +83,6 @@ if [[ -t 1 ]] && command -v thefuck >/dev/null 2>&1; then
     eval "$(thefuck --alias)"
 fi
 
-# Fig is discontinued (became Amazon Q); remnants only add prompt-hook + escape-code noise
-# [[ -f "$HOME/fig-export/dotfiles/dotfile.bash" ]] && source "$HOME/fig-export/dotfiles/dotfile.bash"
-
 # Kiro CLI post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/kiro-cli/shell/bashrc.post.bash" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/bashrc.post.bash"
 

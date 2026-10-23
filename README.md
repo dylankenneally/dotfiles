@@ -33,7 +33,9 @@ cd dotfiles
 
 Files that are shared by every OS sit in the repo as-is; files that are specific to an OS are named for it (e.g. `*.macos.*`, `*.windows.*`). The list of what goes where lives in [lib/common.sh](./lib/common.sh).
 
-Any file that would be replaced, and differs, is backed up to `~/.dotfiles-backup/<timestamp>/` first. Missing tools are skipped and listed at the end, so install them and re-run that section. Secrets are stored as `REDACTED` in the repo, and the install lists any you need to set again.
+Any file that would be replaced, and differs, is backed up to `~/.dotfiles-backup/<timestamp>/` first. Missing tools are skipped and listed at the end, so install them and re-run that section.
+
+Secrets (tokens, passwords, keys) never go in the repo. Put them in `~/.secrets` (e.g. `export NPM_TOKEN=...`), which `.bash_profile` sources and neither script copies.
 
 ## Detailed setup
 
@@ -140,10 +142,10 @@ When new items are installed/removed from your dev env, or just periodically, ru
 
 ```bash
 ./update-repo.sh                    # everything
-./update-repo.sh dotfiles packages  # or just some sections: dotfiles, aliases, settings, packages
+./update-repo.sh dotfiles packages  # or just some sections: dotfiles, settings, packages
 ```
 
-- The dotfiles are shared by every OS, so keep OS-specific lines in them safe to run elsewhere (e.g. guarded by `[[ -f ... ]]`).
-- Editor settings, the alias snapshot and package lists are per OS, so a run on one machine never touches another's.
+- The dotfiles are shared by every OS, so keep OS-specific lines in them safe to run elsewhere (e.g. guarded by `[[ -f ... ]]` or `[[ -d ... ]]`).
+- Editor settings and package lists are per OS, so a run on one machine never touches another's.
 - A file is only replaced when its command succeeds with output, so a missing or failing tool can't empty it.
-- Secrets exported from the dotfiles (tokens, passwords, keys) are written to the repo as `REDACTED`.
+- A dotfile or settings file that looks like it holds a secret stops the run, move the secret to `~/.secrets` and re-run.

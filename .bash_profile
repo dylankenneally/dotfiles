@@ -1,23 +1,27 @@
 # Kiro CLI pre block. Keep at the top of this file.
 [[ -f "${HOME}/Library/Application Support/kiro-cli/shell/bash_profile.pre.bash" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/bash_profile.pre.bash"
 
+# brew installed items go in front of the older macOS system versions (bash 3.2, Xcode's git and python); NB: macOS only, guarded
+[[ -x /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
+export PATH=$PATH:~/.local/bin
+
 # add VS code to the path; NB: macOS only, not Linux path
 export PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
 
-# add python 3 (v3.10) to the front path as XCode has v2.x in there first; NB: macOS only, not Linux path
-PATH="/opt/homebrew/Cellar/bash/5.2.15/bin:~/.fig/bin:/Library/Frameworks/Python.framework/Versions/3.10/bin:${PATH}"
+# python.org's python 3.11 goes in front of brew's and Xcode's; NB: macOS only, not Linux path
+PATH="/Library/Frameworks/Python.framework/Versions/3.11/bin:${PATH}"
 export PATH
 
-# for brew installed items
-export PATH=$PATH:~/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin
-
 # Java Development Kit, via Zulu, ref: https://reactnative.dev/docs/environment-setup?guide=native&platform=android
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+if [[ -d /Library/Java/JavaVirtualMachines/zulu-17.jdk ]]; then
+    export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+fi
 
 # Android development, ref: https://reactnative.dev/docs/environment-setup?guide=native&platform=android
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+if [[ -d $HOME/Library/Android/sdk ]]; then
+    export ANDROID_HOME=$HOME/Library/Android/sdk
+    export PATH=$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/build-tools
+fi
 
 # silence apple message about switching to zsh (z shell), I'm happy with bash, which I keep up to date, https://itnext.io/upgrading-bash-on-macos-7138bd1066ba
 export BASH_SILENCE_DEPRECATION_WARNING=1
@@ -25,30 +29,11 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 # setup the interactive shell
 test -f ~/.bashrc && builtin source ~/.bashrc
 
-# ruby environment manager (for React Native iOS builds etc)
-# eval "$(rbenv init - bash)"
-
-# Setting PATH for Python 3.11
-# The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.11/bin:${PATH}"
-export PATH
-
-# Setting PATH for Python 2.7
-# The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-export PATH
-
-# android build tools
-export PATH=$PATH:$ANDROID_HOME/platform-tools/
-export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin/
-export PATH=$PATH:$ANDROID_HOME/build-tools
-export PATH=$PATH:$ANDROID_HOME/emulator/
-
 # stuff that would be available via brew, but needed to use pip (python) on Windows
 export PATH=$PATH:~/AppData/Local/Python/pythoncore-3.14-64/Scripts/
 
-# Speedshield npm token, do not commit to git
-export NPM_TOKEN=REDACTED
+# secrets (e.g. `export NPM_TOKEN=...`) live in ~/.secrets, which is never copied into the repo
+[[ -f ~/.secrets ]] && builtin source ~/.secrets
 
 # Kiro CLI post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/kiro-cli/shell/bash_profile.post.bash" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/bash_profile.post.bash"

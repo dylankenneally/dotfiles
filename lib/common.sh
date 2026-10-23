@@ -2,7 +2,7 @@
 #
 # shared by install.sh and update-repo.sh, so both agree on what lives where
 # - shared files: the dotfiles are the same on every OS (OS-specific lines in them guard themselves)
-# - per-OS files: VS Code settings, the alias snapshot and package lists are named by OS, so a run on one machine never overwrites another's
+# - per-OS files: VS Code settings and package lists are named by OS, so a run on one machine never overwrites another's
 
 # dotfiles that live in $HOME and are mirrored, as-is, in the repo root
 DOTFILES=(.bash_profile .bashrc .gitconfig .gitconfig-personal .gitconfig-work .editorconfig .prettierrc.js)
@@ -45,7 +45,6 @@ OS=$(detect_os)
 
 # per-OS files, relative to the repo root
 SETTINGS="settings.$OS.json"
-ALIASES="aliases.$OS.sh"
 REQUIREMENTS="requirements.$OS.txt"
 VSCODE_EXTENSIONS="vscode.$OS.extensions"
 BREWFILE="Brewfile"
