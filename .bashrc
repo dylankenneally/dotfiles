@@ -43,7 +43,11 @@ get_shell_count_display() {
 
 # returns the current git branch, for use in the prompt below
 parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+    local branch
+    branch=$(git branch --show-current 2>/dev/null)
+    if [[ -n $branch ]]; then
+        echo " ($branch)"
+    fi
 }
 
 # Docker CLI helpers, start containers in an interactive shell

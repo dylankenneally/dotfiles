@@ -18,7 +18,7 @@ Quick setup details: software to install, config/dotfiles & packages
 
 ### Install the repo onto a machine
 
-Works on macOS and on Windows (from `git-bash`).
+Works on macOS and on Windows (from `git-bash`). Linux isn't supported yet, the scripts stop with an error there.
 
 ```bash
 git clone https://github.com/dylankenneally/dotfiles.git
@@ -72,7 +72,6 @@ Typical extensions are listed per OS, in `vscode.<os>.extensions`, and are insta
 Settings are kept per OS, in `settings.<os>.json`. `./install.sh settings` places this OS's file in the following locations:
 
 - macOS `$HOME/Library/Application\ Support/Code/User/settings.json`
-- Linux `$HOME/.config/Code/User/settings.json`
 - Windows `%APPDATA%\Code\User\settings.json`
 
 ### Working with editors (including Visual Studio Code)
