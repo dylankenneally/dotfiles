@@ -1,5 +1,5 @@
-# Kiro CLI pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/bashrc.pre.bash" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/bashrc.pre.bash"
+# Easy Complete pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/easy-complete/shell/bashrc.pre.bash" ]] && builtin source "${HOME}/Library/Application Support/easy-complete/shell/bashrc.pre.bash"
 
 # lazy navigation
 alias ..="cd .."
@@ -88,10 +88,10 @@ if [[ -t 1 ]] && command -v thefuck >/dev/null 2>&1; then
     eval "$(thefuck --alias)"
 fi
 
-# Kiro CLI post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/bashrc.post.bash" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/bashrc.post.bash"
-
 # Kiro IDE terminal integration, only when the `kiro` command is on the PATH to locate it
 if [[ $TERM_PROGRAM == kiro ]] && command -v kiro >/dev/null 2>&1; then
     . "$(kiro --locate-shell-integration-path bash)"
 fi
+
+# Easy Complete post block. Keep near the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/easy-complete/shell/bashrc.post.bash" ]] && builtin source "${HOME}/Library/Application Support/easy-complete/shell/bashrc.post.bash"

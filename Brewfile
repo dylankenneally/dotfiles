@@ -1,4 +1,5 @@
 tap "bysiber/cleardisk", trusted: true
+tap "chen86860/tap"
 tap "facebook/fb", trusted: true
 tap "homebrew/bundle"
 tap "homebrew/services"
@@ -91,6 +92,8 @@ cask "bysiber/cleardisk/cleardisk"
 cask "dbeaver-community"
 # Developer platform
 cask "dotnet-sdk"
+# IDE-style inline autocomplete for terminals
+cask "chen86860/tap/easy-complete", trusted: true
 cask "fig"
 # Desktop debugging platform for mobile developers
 cask "flipper"

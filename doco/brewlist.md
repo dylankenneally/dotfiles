@@ -16,6 +16,7 @@ cloc: Statistics utility to count lines of code
 double-conversion: Binary-decimal and decimal-binary routines for IEEE doubles
 edencommon: Shared library for Watchman and Eden projects
 eza: Modern, maintained replacement for ls
+idb-companion: Companion server for automating iOS Simulators
 fb303: Thrift functions for querying information from a service
 fbthrift: Facebook's branch of Apache Thrift, including a new C++ server
 fizz: C++14 implementation of the TLS-1.3 standard
@@ -98,12 +99,12 @@ openjdk: Development kit for the Java programming language
 openjpeg: Library for JPEG-2000 image manipulation
 openjph: Open-source implementation of JPEG2000 Part-15 (or JPH or HTJ2K)
 openssl@3: Cryptography and SSL/TLS Toolkit
+bun: Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
 p11-kit: Library to load and enumerate PKCS#11 modules
 pango: Framework for layout and rendering of i18n text
 pcre2: Perl compatible regular expressions library with a new API
 pinentry: Passphrase entry dialog utilizing the Assuan protocol
 pixman: Low-level library for pixel manipulation
-pkgconf: Package compiler and linker metadata toolkit
 pkgconf: Package compiler and linker metadata toolkit
 python@3.11: Interpreted, interactive, object-oriented programming language
 python@3.12: Interpreted, interactive, object-oriented programming language
@@ -130,14 +131,13 @@ xorgproto: X.Org: Protocol Headers
 xxhash: Extremely fast non-cryptographic hash algorithm
 xz: General-purpose data compression with high compression ratio
 zstd: Zstandard is a real-time compression algorithm
-idb-companion: Companion server for automating iOS Simulators
-bun: Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
+cleardisk: (ClearDisk) Free, open-source macOS app to find and clean developer caches
+easy-complete: (Easy Complete) IDE-style inline autocomplete for terminals
 dbeaver-community: (DBeaver Community Edition) Universal database tool and SQL client
 dotnet-sdk: (.NET SDK) Developer platform
 flipper: (Facebook Flipper) Desktop debugging platform for mobile developers
 vlc: (VLC media player) Multimedia player
 zulu@11: (Azul Zulu Java Standard Edition Development Kit) OpenJDK distribution from Azul
 zulu@17: (Azul Zulu Java Standard Edition Development Kit) OpenJDK distribution from Azul
-cleardisk: (ClearDisk) Free, open-source macOS app to find and clean developer caches
 
 To generate the above list, run `brew list --formula --full-name | xargs brew desc --formula` and `brew list --cask --full-name | xargs brew desc --cask`.
